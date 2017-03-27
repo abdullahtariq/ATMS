@@ -1,0 +1,51 @@
+/*
+author : manzar nauman;
+*/
+.tooltip{
+	opacity: 1 !important;
+}
+
+#mainav.right-nav{
+	float: right;
+    font-size: 20px;
+}
+.right-nav li {
+	bottom: 3px;
+}
+
+/*---------------------------------
+
+    StyleSheet For User Manager Form
+
+-------------------------------------*/
+.common-border{
+    border: 2px solid #d2dbdb;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.basicstn{
+	position: absolute;
+    top: -38px;
+    left: 17px;
+    background: #fff;
+    padding: 0 20px;
+}
+.formheading{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.rolestn{
+        position: absolute;
+        bottom: 86px;
+        background: #fff;
+        padding: 0 20px;
+        left: 18px;
+}
+.capitalize{
+    text-transform: capitalize;
+}
