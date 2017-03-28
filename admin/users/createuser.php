@@ -36,9 +36,13 @@
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope"></span>
 								</span>
-								<input type="email" required name="email" class="form-control" id="Email" data-error="Please enter a valid email.">
+								<input type="email" required name="email" class="form-control" id="Email" data-error="Please enter a valid email." onkeyup="checkemail(this.value)">
+								<span id="msg"></span>
+												         
 								
 							</div>
+
+
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
@@ -185,9 +189,12 @@
 							</div>
 						</div>
 					</div>     
-				</div>	
+				</div>
 
-				<input type="submit" value="submit" class="btn btn-success ">
+				
+	
+             <button  class="btn btn-success ">submit</button>
+				
 			</div>
 
 

@@ -32,9 +32,6 @@
  	$columnValues = array(); // define column value in array
  	
  	$password = generateRandomString(); // from here we gonna send password/email to user
-        // Send Details to Email
-        $userInfo= array("firstName"=>$postObject['fname'],"lastName"=>$postObject['lname'],"email"=>$postObject['email'],"password"=>$password);
-        sendPasswordInEmail($userInfo);
  	foreach ($postObject as $key => $value) {// 
  		array_push($columnArray,$key);           //pushing columns names
  		array_push($columnValues,'"'.$value.'"'); //pushing columns value

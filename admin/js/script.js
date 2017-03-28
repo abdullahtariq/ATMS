@@ -94,11 +94,51 @@
            }
     }
 
+
+
+  /*   emai validation         */
+                   
+function checkemail(val) {
+                
+                $.ajax({
+                    type:"POST",
+                    url:"common.php",
+                    data:'email='+val,
+                    success:function(data) {
+                      
+                      $("#msg").html(data);
+                    }
+                })
+                } 
+                             
+
+/*--------------END ajax-----------------*/
+             
+
+
+
+
+
+
 /*=================================
  Plugin Intializers
 ==================================*/
 
 $(document).ready(function(){
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 	$('.selectpicker').selectpicker({
 		  size: 5,
 		  width : '100%'
