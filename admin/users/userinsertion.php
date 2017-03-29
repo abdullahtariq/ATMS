@@ -16,7 +16,7 @@ $funds=$_POST['funds'];
 //$uniqueStr = generateRandomString();
 $getUser = select('users',$email,'');
 
-if(mysql_num_rows($getUser) == 0){
+if(mysqli_num_rows($getUser) == 0){
 	$query = getInsertQuery('users',$_POST);
 	
 
