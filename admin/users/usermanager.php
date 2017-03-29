@@ -44,7 +44,7 @@ if(isset($_SESSION["message"]))
 				<?php
 				$ftnresult=select('users',"","");
 
-				while ($userResult=mysql_fetch_assoc($ftnresult)) { ?>
+				while ($userResult=mysqli_fetch_assoc($ftnresult)) { ?>
 
 
 				

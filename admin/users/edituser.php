@@ -9,7 +9,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 $result = select("users","",$id);
 
 // echo mysql_num_rows($result);
-$ftnresult=mysql_fetch_assoc($result);
+$ftnresult=mysqli_fetch_assoc($result);
 
 // print_r($ftnresult);
 

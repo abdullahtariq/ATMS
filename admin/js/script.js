@@ -96,8 +96,8 @@
 
 
 
-  /*   emai validation         */
-                   
+ /*--------------Check email exist in DB through ajax-----------------*/
+ 
 function checkemail(val) {
   // var mailwrapper=document.getElementById('emailwrap');
   // console.log(mailwrapper);

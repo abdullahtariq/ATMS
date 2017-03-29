@@ -18,7 +18,7 @@ $getUser = select('users',$email,'');
 
 if(mysql_num_rows($getUser) == 0){
 	$query = getInsertQuery('users',$_POST);
-	$result = mysql_query($query)or die(mysql_error());
+	
 
 
 $_SESSION["message"]="MESSAGE OF SUCCESS";// show a message to user after  registration

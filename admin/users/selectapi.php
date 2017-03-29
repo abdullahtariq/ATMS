@@ -14,11 +14,9 @@
   		$query='SELECT * From '.$tableName;
   	}
   
-
-  $result=mysql_query($query)or die(mysql_error());
-
-   
-   return $result;
+    global $conn;
+    $result =mysqli_query($conn,$query);
+    return $result;
 
   };
 
@@ -49,7 +47,10 @@
   /*--------   End   -----------*/
 
  	$query = "INSERT INTO ".$tableName." (" . implode(',', $columnArray) . ") VALUES (" . implode(',', $columnValues). ")";
- 	 return $query;
+ 	 
+    global $conn;
+    $resultint = mysqli_query($conn,$query); 
+    return  $resultint;
           
  };
 
@@ -70,9 +71,9 @@
             // print_r($updtevalues);
        $updatequery= "UPDATE ".$tableName." SET ". implode(',', $updtevalues). " WHERE id=".$id."";
       
-     mysql_query($updatequery)or die(mysql_error());
-
-        return $updatequery;
+        global $conn;
+        $resultup=mysqli_query($conn,$updatequery);
+        return $resultup;
  }
 
 ?>

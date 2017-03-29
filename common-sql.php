@@ -1,12 +1,16 @@
 <?php  
  
-$conection=mysql_connect('localhost','almub345_admin','s7*PVFAIi2$*');//always three strings 1-localhost. 2-user. 3-pasword
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname ="emp-mns";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password,$dbname);
 
-if($conection){
-//echo "connnection  establish";
-}else{
-	die('could not connect :'.mysql_error());
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
-mysql_select_db('almub345_emp-mns');
+// echo "Connected successfully"."<br>";
 ?>

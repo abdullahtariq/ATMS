@@ -2,7 +2,7 @@
 
 $result = select("users","",$_GET['id']);
 // echo mysql_num_rows($result);
-$ftnresult=mysql_fetch_assoc($result);
+$ftnresult=mysqli_fetch_assoc($result);
 
 $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
 $roleINFO= array("CH"=>"Cheif","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
