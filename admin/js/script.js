@@ -94,11 +94,59 @@
            }
     }
 
+
+
+ /*--------------Check email exist in DB through ajax-----------------*/
+ 
+function checkemail(val) {
+  // var mailwrapper=document.getElementById('emailwrap');
+  // console.log(mailwrapper);
+                           // alert('hit');
+                           $.ajax({
+                             type:"POST",
+                             url:"/NEWemp-mns/admin/users/emailvali.php",
+                             data:'email='+val,
+                             success:function(data) {
+                              
+                              $("#msg").html(data);
+                              if (data=='Email is alrady exist') {
+                                var mailwrapper=document.getElementById('emailwrap');
+                              mailwrapper.classList.add("has-error");
+                              }
+
+
+                            }
+                          })
+                         } 
+                             
+
+/*--------------END ajax-----------------*/
+             
+
+
+
+
+
+
 /*=================================
  Plugin Intializers
 ==================================*/
 
 $(document).ready(function(){
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 	$('.selectpicker').selectpicker({
 		  size: 5,
 		  width : '100%'

@@ -2,12 +2,13 @@
 
 $result = select("users","",$_GET['id']);
 // echo mysql_num_rows($result);
-$ftnresult=mysql_fetch_assoc($result);
+$ftnresult=mysqli_fetch_assoc($result);
 
 $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
 $roleINFO= array("CH"=>"Cheif","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
 $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"=>"10 RCR (Cost Recovery)");
 ?>
+
 <div class="container"> 
      <div class="text-center">
      	<h2>User Detail</h2>

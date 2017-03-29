@@ -5,11 +5,12 @@ $email=$_POST['email'];
 $password=md5($_POST['password']);
 // echo $email;
 $query='SELECT * From users Where email="'.$email.'" AND password="'.$password.'"';
-$result=mysql_query($query)or die(mysql_error());
+global $conn;
+$result =mysqli_query($conn,$query);;
  // echo mysql_num_rows( $result);
 
-if (mysql_num_rows( $result)==1) {
- $crntresult=mysql_fetch_assoc($result);
+if (mysqli_num_rows( $result)==1) {
+ $crntresult=mysqli_fetch_assoc($result);
  session_start();
  $_SESSION['email']=$email;
  $_SESSION['password']=$password;

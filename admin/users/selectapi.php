@@ -14,11 +14,9 @@
   		$query='SELECT * From '.$tableName;
   	}
   
-
-  $result=mysql_query($query)or die(mysql_error());
-
-   
-   return $result;
+    global $conn;
+    $result =mysqli_query($conn,$query);
+    return $result;
 
   };
 
@@ -32,9 +30,6 @@
  	$columnValues = array(); // define column value in array
  	
  	$password = generateRandomString(); // from here we gonna send password/email to user
-        // Send Details to Email
-        $userInfo= array("firstName"=>$postObject['fname'],"lastName"=>$postObject['lname'],"email"=>$postObject['email'],"password"=>$password);
-        sendPasswordInEmail($userInfo);
  	foreach ($postObject as $key => $value) {// 
  		array_push($columnArray,$key);           //pushing columns names
  		array_push($columnValues,'"'.$value.'"'); //pushing columns value
@@ -52,7 +47,10 @@
   /*--------   End   -----------*/
 
  	$query = "INSERT INTO ".$tableName." (" . implode(',', $columnArray) . ") VALUES (" . implode(',', $columnValues). ")";
- 	 return $query;
+ 	 
+    global $conn;
+    $resultint = mysqli_query($conn,$query); 
+    return  $resultint;
           
  };
 
@@ -73,9 +71,9 @@
             // print_r($updtevalues);
        $updatequery= "UPDATE ".$tableName." SET ". implode(',', $updtevalues). " WHERE id=".$id."";
       
-     mysql_query($updatequery)or die(mysql_error());
-
-        return $updatequery;
+        global $conn;
+        $resultup=mysqli_query($conn,$updatequery);
+        return $resultup;
  }
 
 ?>
