@@ -8,19 +8,22 @@
     mysql_select_db('emp-mns');
 
     
- $email=$dbhandle->real_escape_string($_POST["email"]);
+ $email=$_POST["email"];
+ // echo $email;
 
- $query='SELECT * From users WHERE email="'.$email.'"';
+  $query='SELECT * From users WHERE email="'.$email.'"';
 
- $result=$dbhandle->query($query);
+ $result=mysql_query($query)or die(mysql_error());
+ 
 
- $num=$result->num_rows;
- if ($num>0) {
-   
-   echo "Email is already exist";
- }else{
-  echo "";
- }
+ if (mysql_num_rows($result)> 0) {
+    
+    echo "Email is alrady exist";
+
+}
+
+ 
+
 
          
   

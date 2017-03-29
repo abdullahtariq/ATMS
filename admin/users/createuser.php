@@ -30,22 +30,21 @@
 
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
-						<div class="form-group">
+						
+						<div id="emailwrap" class="form-group">
 							<label>Email address</label>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope"></span>
 								</span>
-								<input type="email" required name="email" class="form-control" id="Email" data-error="Please enter a valid email." onkeyup="checkemail(this.value)">
-								<span id="msg"></span>
-												         
-								
+								<input type="email" required name="email" class="form-control" id="Email" data-error="Please enter a valid email." onblur="checkemail(this.value)">
 							</div>
-
+							<span id="msg" class="error text-danger"></span>
 
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
+
 					<div class="col-md-6 col-sm-12">
 						<div class="form-group">
 							<label>Desk Phone</label>
@@ -192,8 +191,8 @@
 				</div>
 
 				
-	
-             <button  class="btn btn-success ">submit</button>
+				
+				<button  class="btn btn-success ">submit</button>
 				
 			</div>
 

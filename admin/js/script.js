@@ -99,17 +99,25 @@
   /*   emai validation         */
                    
 function checkemail(val) {
-                
-                $.ajax({
-                    type:"POST",
-                    url:"common.php",
-                    data:'email='+val,
-                    success:function(data) {
-                      
-                      $("#msg").html(data);
-                    }
-                })
-                } 
+  // var mailwrapper=document.getElementById('emailwrap');
+  // console.log(mailwrapper);
+                           // alert('hit');
+                           $.ajax({
+                             type:"POST",
+                             url:"/NEWemp-mns/admin/users/emailvali.php",
+                             data:'email='+val,
+                             success:function(data) {
+                              
+                              $("#msg").html(data);
+                              if (data=='Email is alrady exist') {
+                                var mailwrapper=document.getElementById('emailwrap');
+                              mailwrapper.classList.add("has-error");
+                              }
+
+
+                            }
+                          })
+                         } 
                              
 
 /*--------------END ajax-----------------*/
