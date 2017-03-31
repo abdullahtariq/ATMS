@@ -86,7 +86,7 @@
 
 							<input type="text" class="form-control" required name="idnno" id="Idntnumber" readonly="readonly">
 							<span class="input-group-btn" data-error="Please generate the identification number.">
-								<button onclick="generateRandomNumber()" class="btn btn-primary " type="button">Genrate</button>
+								<button onclick="generateRandomNumber()" class="btn btn-primary " type="button">Generate</button>
 							</span>
 							<div class="help-block with-errors"></div>
 						</div>
@@ -95,14 +95,25 @@
 						<label>Role Information</label>
 						<div class="form-group">
 							<select id="urole" class="selectpicker" name="urole">
-								<option value="CH">Cheif</option>
+								<option value="CH">Chief</option>
 								<option value="HM">Hub Manager</option>
 								<option value="AG">Agent</option>
 								<option value="HS">Hub Supervisor</option>
+								<option value="SF">Staff</option>
 							</select>
 						</div>
 					</div>
 				</div>
+				<div class="row">
+                   <div class="col-sm-12 col-md-6">
+                   	<div class="form-group">
+							<label>Mobile Number</label>
+							<input type="text" class="form-control"  name="Mnumber"  id="Mnumber" >
+							<div class="help-block with-errors"></div>
+						</div>
+                   </div>
+				 </div>
+
 			</div>
 			<br><br><br>
 			<div class="common-border">
@@ -122,7 +133,7 @@
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12">
-						<label id="typefd" style="display: none;">Type Of Contract</label>
+						<label id="typefd" style="display: none;">Contract Type</label>
 						<div class="form-group">
 							<input id="selectedFin" type="hidden">
 							<div id="newdrpdown" >
@@ -174,20 +185,15 @@
 							</select>
 						</div>
 					</div>
-					<div class="col-sm-12 col-md-6">
-						<label id="Anicome" style="display: none;">Annual Income</label>
-						<div class="form-group" >
-							<div style="display:none;" id="salaryInput">
-								<div class="input-group">
-									<input type="text" class="form-control" name="peryear">
-									<span class="input-group-addon">
-										<span id="pryear" style="display:none;">Per Year</span>
-										<span id="prhour" style="display:none;">Per Hour</span>
-									</span>
-								</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="form-group">
+						<label id="pryear" style="display: none;">Annual Salary</label>
+						<label id="prhour" style="display: none;">Hourly Rate</label>
+						<div style="display:none;" id="salaryInput">
+							<input type="text" class="form-control"  name="peryear">
 							</div>
 						</div>
-					</div>     
+					</div>   
 				</div>
 
 				

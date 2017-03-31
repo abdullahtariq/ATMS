@@ -5,6 +5,7 @@ $Dphone=$_POST['dphone'];
 $Actfrom=$_POST['actfrom'];
 $Cnthub=$_POST['cnthub'];
 $Idnno=$_POST['idnno'];
+$Mnumber=$_POST['Mnumber'];
 $Urole=$_POST['urole'];
 $Findata=$_POST['findata'];
 $Finopt=$_POST['finopt'];

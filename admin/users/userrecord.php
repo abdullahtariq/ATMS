@@ -5,7 +5,7 @@ $result = select("users","",$_GET['id']);
 $ftnresult=mysqli_fetch_assoc($result);
 
 $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
-$roleINFO= array("CH"=>"Cheif","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
+$roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor","SF"=>"Staff");
 $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"=>"10 RCR (Cost Recovery)");
 ?>
 
@@ -46,11 +46,12 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 				<thead>
 					<tr>
 						<th>Desk Phone</th>
+						<th>Mobile Phone</th>
 						<th>Activate From</th>
 						<th>HUB</th>
 						<th>Role Information</th>
 						<th>Employee Type</th>
-						<th>Type Of Contract</th>
+						<th>Contract Type</th>
 						<th>Contract Start</th>
 						<th>Contract End</th>
 						<th>PER Year/Hour</th>
@@ -60,6 +61,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 				<tbody>
 					<tr> 
 						<td><?php echo $ftnresult['dphone']; ?></td>
+						<td><?php echo $ftnresult['Mnumber']; ?></td>
 						<td><?php echo $ftnresult['actfrom'];  ?></td>
 						<td><?php echo $continents[$ftnresult['cnthub']];  ?></td>
 						<td><?php echo $roleINFO[$ftnresult['urole']];  ?></td>
