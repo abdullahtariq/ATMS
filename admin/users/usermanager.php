@@ -49,7 +49,7 @@ if(isset($_SESSION["message"]))
                          
 	                <tbody>
 	                <div>
-						<tr class="tablebck">
+						<tr class="danger">
 							<td ><?php echo $userResult['idnno']; ?></td>
 							<td class="capitalize"><?php echo $userResult['fname'] ?></td>
 							<td class="capitalize"><?php echo $userResult['lname'] ?></td>
