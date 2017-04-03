@@ -111,14 +111,14 @@ $ftnresult=mysqli_fetch_assoc($result);
 					</div>
 				</div>
 				<div class="row">
-                   <div class="col-sm-12 col-md-6">
-                   	<div class="form-group">
+					<div class="col-sm-12 col-md-6">
+						<div class="form-group">
 							<label>Mobile Number</label>
 							<input type="text" class="form-control"  name="Mnumber"  id="Mnumber" value="<?php echo  $ftnresult['Mnumber']; ?>" >
 							<div class="help-block with-errors"></div>
 						</div>
-                   </div>
-				 </div>
+					</div>
+				</div>
 			</div>
 			<br><br><br>
 			<div class="common-border">
@@ -194,21 +194,26 @@ $ftnresult=mysqli_fetch_assoc($result);
 					</div>
 					<div class="col-md-6 col-sm-12">
 						<div class="form-group">
-						<label id="pryear" style="display: none;">Annual Salary</label>
-						<label id="prhour" style="display: none;">Hourly Rate</label>
-						<div style="display:none;" id="salaryInput">
-							<input type="text" class="form-control"  name="peryear">
+							<label id="pryear" style="display: none;">Annual Salary</label>
+							<label id="prhour" style="display: none;">Hourly Rate</label>
+							<div style="display:none;" id="salaryInput">
+								<input type="text" class="form-control"  name="peryear"
+								value="<?php echo  $ftnresult['peryear']; ?>"
+								>
 							</div>
 						</div>
 					</div>  
 
 				</div>	
 
+				<div class=" form-group"> 
+					<label>Deactivate Account</label>
+					<input  id="check" type="checkbox" name="Deactivate"  onclick="Deactivate()">
+				</div>
 				<input type="submit" value="submit" class="btn btn-success ">
+				
+				
 			</div>
-
-
-
 		</form>
 
 

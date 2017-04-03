@@ -14,14 +14,18 @@
  	 var Email=document.getElementById('Email').value;
  	 var Dphone=document.getElementById('Dphone').value;
  	 var Cnthub=document.getElementById('Cnthub').value;
-    var d=new Date();
-   var n=d.getTime();
-   // var m=n.substring(1,4);
-   console.log(n);
-
+    
+  
+  
+     var d=new Date();
+     var n=d.getTime();
+     // console.log(n);
+     n = n.toString()
+     m=n.substring(9,14)
+     // console.log(m)
 
  	 // console.log(Fname.charAt(0)+Lname.charAt(0)+Cnthub);
-    var res=Fname.charAt(0).toUpperCase()+Lname.charAt(0).toUpperCase()+"-"+Dphone.substring(0,4);
+    var res=Fname.charAt(0).toUpperCase()+Lname.charAt(0).toUpperCase()+"-"+n.substring(9,14);
      
 
     document.getElementById("Idntnumber").value = res;
@@ -124,7 +128,7 @@ function checkemail(val) {
                              
 
 /*--------------END ajax-----------------*/
-             
+           
 
 
 
