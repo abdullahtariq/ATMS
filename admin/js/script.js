@@ -14,8 +14,18 @@
  	 var Email=document.getElementById('Email').value;
  	 var Dphone=document.getElementById('Dphone').value;
  	 var Cnthub=document.getElementById('Cnthub').value;
+    
+  
+  
+     var d=new Date();
+     var n=d.getTime();
+     // console.log(n);
+     n = n.toString()
+     m=n.substring(9,14)
+     // console.log(m)
+
  	 // console.log(Fname.charAt(0)+Lname.charAt(0)+Cnthub);
-    var res=Fname.charAt(0).toUpperCase()+Lname.charAt(0).toUpperCase()+"-"+Cnthub+"-"+Dphone.substring(0,4);
+    var res=Fname.charAt(0).toUpperCase()+Lname.charAt(0).toUpperCase()+"-"+n.substring(9,14);
      
 
     document.getElementById("Idntnumber").value = res;
@@ -79,17 +89,14 @@
            document.getElementById('typefd').style.display = "block";
             document.getElementById('pryear').style.display="none";
             document.getElementById('prhour').style.display="none";
-            document.getElementById('Anicome').style.display="none";
             document.getElementById('salaryInput').style.display="block";
             
            if (change=='un employee'|| change=='un family contractor') {
 
            	  document.getElementById('pryear').style.display="block";
-              document.getElementById('Anicome').style.display="block";
 
            }else if(change=='consultants'){
            	document.getElementById('prhour').style.display="block";
-            document.getElementById('Anicome').style.display="block";
 
            }
     }
@@ -121,7 +128,7 @@ function checkemail(val) {
                              
 
 /*--------------END ajax-----------------*/
-             
+           
 
 
 
