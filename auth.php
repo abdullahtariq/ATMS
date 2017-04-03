@@ -4,10 +4,10 @@ include 'header.php';
 $email=$_POST['email'];
 $password=md5($_POST['password']);
 // echo $email;
-$query='SELECT * From users Where email="'.$email.'" AND password="'.$password.'"';
+$query='SELECT * From users Where email="'.$email.'" AND password="'.$password.'" AND deactivate<>"on"';
 global $conn;
 $result =mysqli_query($conn,$query);;
- // echo mysql_num_rows( $result);
+ // echo mysqli_num_rows( $result);
 
 if (mysqli_num_rows( $result)==1) {
  $crntresult=mysqli_fetch_assoc($result);
