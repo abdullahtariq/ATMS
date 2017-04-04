@@ -1,8 +1,11 @@
 <?php
 ///////////////////Login Form/////////////////////
+include 'admin/methods/cmethods.php';
 include 'header.php';
+   sendmessages(); // ftn cal for error message
 ?>
 <div class="container">
+
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<div class="panel panel-login panel-head">
@@ -56,3 +59,7 @@ include 'header.php';
 	</div>
 </div>
 </div>
+
+<?php 
+  include 'footer.php';
+?>

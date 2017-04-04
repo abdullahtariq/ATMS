@@ -3,23 +3,33 @@ ob_start();
 include 'header.php';
 $email=$_POST['email'];
 $password=md5($_POST['password']);
-// echo $email;
+
 $query='SELECT * From users Where email="'.$email.'" AND password="'.$password.'" AND deactivate<>"on"';
 global $conn;
-$result =mysqli_query($conn,$query);;
- // echo mysqli_num_rows( $result);
+$result =mysqli_query($conn,$query);
+  echo mysqli_num_rows( $result);
 
 if (mysqli_num_rows( $result)==1) {
  $crntresult=mysqli_fetch_assoc($result);
- session_start();
+
  $_SESSION['email']=$email;
  $_SESSION['password']=$password;
+
+ $queryup= 'UPDATE `users` SET lastactivity=now() Where email="'.$email.'"';
+ 
+ mysqli_query($conn,$queryup)or die(mysqli_error());
+
  if ($crntresult['user_type']=='admin') {
+ 	
     header('Location:admin/index.php?act=mgu');
 
  }
 }else{
-	echo 'Invalid Email or Password';
+
+	
+	$_SESSION["error"]="MESSAGE OF ERROR";
+	 header('Location:index.php');
+	  
 }
 
 ?>

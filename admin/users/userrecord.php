@@ -21,6 +21,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 						<a href="index.php?act=mgupdate&id=<?php echo $ftnresult['id'] ; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit">
 							<input type="button" value="Edit" id="login-submit"  class="btn btn-primary" ></a>
 						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -30,10 +31,12 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 			<table class="table table-striped table-bordered" style="width:400px;">
 				<thead>
 					<tr>
+					<?php $date=date_create($ftnresult['lastactivity']); ?>
 						<th >
 							Name  : <span><?php echo $ftnresult['lname'].$ftnresult ['fname'];?></span><br/>
 							Email : <?php echo $ftnresult['email'];?><br/>
-							Identification : <?php echo $ftnresult['idnno'];?>
+							Identification : <?php echo $ftnresult['idnno'];?><br/>
+							Last Login : <?php echo date_format($date, 'd-m-Y h:i:s A');  ?>
 						</th>  
 						
 					</tr>
@@ -56,6 +59,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 						<th>Contract End</th>
 						<th>PER Year/Hour</th>
 						<th>Funding Sources</th>
+					
 					</tr>
 				</thead>
 				<tbody>

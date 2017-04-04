@@ -32,6 +32,7 @@ echo '<script type="text/javascript">
 
 }
 else{
+	
 	echo 'User can not be created. Email already exists';
 }
 ?>

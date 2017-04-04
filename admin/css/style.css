@@ -49,3 +49,7 @@ author : manzar nauman;
 .capitalize{
     text-transform: capitalize;
 }
+.tablebck {
+    border: 2px solid red;
+    border-top: 3px solid red;
+}

@@ -1,6 +1,7 @@
 <?php
-  include '../common-sql.php';
 
+  include '../common-sql.php';
+ session_start();
 ?>
 <!doctype html>
 

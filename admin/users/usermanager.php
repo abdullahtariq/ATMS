@@ -1,15 +1,6 @@
 
 <?php     
-if(isset($_SESSION["message"]))
-	{?>
-<div class="container">
-	<div id="myalert"  class="alert alert-success" role="alert" collapse>
-		<a href="#" class="close" data-dismiss="alert">&times;</a>
-		<strong> your account has been created !</strong>
-	</div>
-</div>
-<?php  unset($_SESSION["message"]);
-}
+   sendmessages();//ftn cal for success message
 ?>
 
 <div class="container">
@@ -49,7 +40,7 @@ if(isset($_SESSION["message"]))
                          
 	                <tbody>
 	                <div>
-						<tr class="danger">
+	             				<tr class="danger">
 							<td ><?php echo $userResult['idnno']; ?></td>
 							<td class="capitalize"><?php echo $userResult['fname'] ?></td>
 							<td class="capitalize"><?php echo $userResult['lname'] ?></td>

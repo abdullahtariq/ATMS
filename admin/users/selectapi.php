@@ -68,7 +68,7 @@
 
       }
             
-            // print_r($updtevalues);
+             print_r($updtevalues);
        $updatequery= "UPDATE ".$tableName." SET ". implode(',', $updtevalues). " WHERE id=".$id."";
       
         global $conn;

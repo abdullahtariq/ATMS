@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include 'header.php';
 include 'methods/cmethods.php';
 include 'users/selectapi.php';
