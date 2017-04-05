@@ -1,6 +1,8 @@
 <?php
 
 include 'header.php';
+if (isset($_SESSION['email'])) {
+	
 include 'methods/cmethods.php';
 include 'users/selectapi.php';
 $staticURL="";
@@ -28,5 +30,8 @@ else{
 }
 
 include 'footer.php';
+}else{
+	header("Location:../index.php");
+}
 ?>
 
