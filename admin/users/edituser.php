@@ -205,11 +205,19 @@ $ftnresult=mysqli_fetch_assoc($result);
 					</div>  
 
 				</div>	
-
-				<div class=" form-group"> 
+       <?php   
+          if ($ftnresult['deactivate']=='on') {?>
+          	<div class=" form-group"> 
 					<label>Deactivate Account</label>
-					<input  id="check" type="checkbox" name="Deactivate"  onclick="Deactivate()">
+					<input  id="check" type="checkbox" name="deactivate" checked="checked"  >
 				</div>
+         <?php }else{?>
+                   <div class=" form-group"> 
+					<label>Deactivate Account</label>
+					<input  id="check" type="checkbox" name="deactivate"  ><br>
+        <?php }
+       ?>
+				
 				<input type="submit" value="submit" class="btn btn-success ">
 				
 				
