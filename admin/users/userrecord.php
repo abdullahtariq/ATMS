@@ -1,8 +1,11 @@
 <?php 
 
 $result = select("users","",$_GET['id']);
+
 // echo mysql_num_rows($result);
 $ftnresult=mysqli_fetch_assoc($result);
+
+
 
 $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
 $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor","SF"=>"Staff");

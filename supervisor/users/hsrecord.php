@@ -1,6 +1,9 @@
 <?php 
-
-$result = select("users",array("user_id"=>$_GET['id']));
+// $create=$_SESSION['created_by'];
+   $id=$_GET['id'];
+    // echo $create;
+    
+$result = select("users",array("user_id"=>$id));
 // echo $result;
 
 // echo mysql_num_rows($result);
@@ -9,7 +12,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 
 $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
 $roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
-$fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"=>"10 RCR (Cost Recovery)");
+
 
 ?>
 
@@ -17,19 +20,6 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
      <div class="text-center">
      	<h2>User Detail</h2>
      </div>
-	<div class="panel-body">
-		<div class="col-lg-12">
-			<div class="form-group pull-right">
-				<div class="row">
-					<div class="col-sm-2 col-sm-offset-3">
-						<a href="index.php?act=hmupdate&id=<?php echo $ftnresult['user_id'] ; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit">
-							<input type="button" value="Edit" id="login-submit"  class="btn btn-primary" ></a>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered" style="width:400px;">
@@ -57,12 +47,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 						<th>Activate From</th>
 						<th>HUB</th>
 						<th>Role Information</th>
-						<th>Employee Type</th>
-						<th>Contract Type</th>
-						<th>Contract Start</th>
-						<th>Contract End</th>
-						<th>PER Year/Hour</th>
-						<th>Funding Sources</th>
+						
 						
 					
 					</tr>
@@ -74,12 +59,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 						<td><?php echo $ftnresult['activefrom'];  ?></td>
 						<td><?php echo $continents[$ftnresult['continents']];  ?></td>
 						<td><?php echo $roleINFO[$ftnresult['inforole']];  ?></td>
-						<td><?php echo $ftnresult['finanasdata'];?></td>
-						<td><?php echo $ftnresult['finanasoption'];  ?></td>
-						<td><?php echo $ftnresult['contractstart'];  ?></td>
-						<td><?php echo $ftnresult['contractend'];  ?></td>
-						<td><?php echo $ftnresult['peryear'];  ?></td>
-						<td><?php echo $fundsource[$ftnresult['funds']];  ?></td>
+						
 						
 						
 					</tr>

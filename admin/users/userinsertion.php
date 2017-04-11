@@ -1,5 +1,5 @@
 <?php
-
+$email=$_POST['email'];
 //$uniqueStr = generateRandomString();
 $getUser = select('users',$email,'');
 
