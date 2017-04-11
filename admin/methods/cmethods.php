@@ -80,17 +80,7 @@ function sendmessages(){
 </div>
 </div>
 <?php  unset($_SESSION["error"]);
-}elseif (isset($_SESSION["deactivate"])) { ?>
- 
- <div class="container">
- <div id="myalert"  class="alert alert-success" role="alert" collapse>
-  <a href="#" class="close" data-dismiss="alert">&times;</a>
-  <strong>Account has been deactivated</strong>
-</div>
-</div>
-
-<?php unset($_SESSION["deactivate"]);
-} 
+}
 }
 
 ?>
