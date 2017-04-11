@@ -28,8 +28,9 @@ if (mysqli_num_rows( $result)==1) {
 
  }elseif ($crntresult['user_type']=='HM') {
       	
-
+                         
  	$_SESSION['identity_no']=$crntresult['identity_no'];
+
  	 header('Location:manager/index.php?act=hmu');
  }
 }else{
