@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2017 at 09:20 PM
+-- Generation Time: Apr 11, 2017 at 03:54 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -27,46 +27,46 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `user_type` varchar(100) NOT NULL,
-  `fname` varchar(25) NOT NULL,
-  `lname` varchar(25) NOT NULL,
-  `dphone` varchar(50) NOT NULL,
-  `actfrom` varchar(100) NOT NULL,
-  `idnno` varchar(100) NOT NULL,
-  `Mnumber` varchar(50) NOT NULL,
-  `contsrt` varchar(50) NOT NULL,
-  `contend` varchar(50) NOT NULL,
-  `peryear` varchar(100) NOT NULL,
-  `cnthub` varchar(50) NOT NULL,
-  `urole` varchar(50) NOT NULL,
-  `findata` varchar(50) NOT NULL,
-  `finopt` varchar(50) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `deskphone` varchar(50) NOT NULL,
+  `activefrom` varchar(100) NOT NULL,
+  `mobile` varchar(50) NOT NULL,
+  `contractstart` varchar(50) NOT NULL,
+  `contractend` varchar(50) NOT NULL,
+  `peryear` varchar(50) NOT NULL,
+  `continents` varchar(50) NOT NULL,
+  `inforole` varchar(50) NOT NULL,
+  `identity_no` varchar(100) NOT NULL,
+  `finanasdata` varchar(50) NOT NULL,
+  `finanasoption` varchar(50) NOT NULL,
   `funds` varchar(50) NOT NULL,
-  `lastactivity` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `deactivate` varchar(50) NOT NULL
+  `lastactivity` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deactivate` varchar(50) NOT NULL,
+  `created_by` varchar(100) NOT NULL,
+  `new_user_c` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `new_user_e` int(11) NOT NULL,
+  `created_by_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `user_type`, `fname`, `lname`, `dphone`, `actfrom`, `idnno`, `Mnumber`, `contsrt`, `contend`, `peryear`, `cnthub`, `urole`, `findata`, `finopt`, `funds`, `lastactivity`, `deactivate`) VALUES
-(1, 'admin@unems.com', 'acbd9ab2f68bea3f5291f825416546a1', 'admin', 'Fahad', 'Test 3', '7678965', '02-04-2017', 'FT-AS-7678', '879578687', '24-03-2017', '31-03-2017', '2345566', 'AS', 'HM', 'consultants', 'SSA', 'RB-10', '2017-04-02 18:52:33', 'on'),
-(30, 'ayesha@ahmad.com', '44ee4f5046b0085efdac448ab1db9468', 'HS', 'Ayesha', 'Ahmad', '356789656788', '29-03-2017', 'AA-AS-3567', '', '09-03-2017', '07-03-2017', '23222', 'AS', 'HS', 'un employee', 'Continuous', '2QS', '0000-00-00 00:00:00', ''),
-(32, 'jawad@you.com', '598cd6dba5eb9548055c09de01dbd10e', 'HS', 'remsha', 'jawad', '57687953', '27-03-2017', 'RJ-AF-5768', '', '03-03-2017', '06-03-2017', '500000', 'AF', 'HS', 'un employee', 'Temporary Appointment', '2QS', '0000-00-00 00:00:00', ''),
-(59, 'qb@gmail.com', 'ccfedbee478ac1c88ffe34ced9bc16a9', 'AG', 'Imran', 'IMP', '7560536790', '28-03-2017', 'II-AM-7560', '', '11-03-2017', '08-03-2017', '56666', 'AM', 'AG', 'un family contractor', 'ICC', '2QS', '0000-00-00 00:00:00', ''),
-(60, 'eric@shaw.com', 'f22cf276cdfd98c8afb5bb9b12db777d', 'HM', 'eric', 'shaw', '593562663', '28-03-2017', 'ES-EU-5935', '', '11-03-2017', '01-02-2017', '56666', 'EU', 'HM', 'un family contractor', 'ICC', '2QS', '0000-00-00 00:00:00', ''),
-(61, 'jhon@2.com', 'db7b0e73ade7728516e2f3a6fe430905', 'AG', 'jay', 'jhon', '539588372', '02-04-2017', 'JJ-EU-5395', '', '01-03-2017', '01-03-2017', '100', 'EU', 'AG', 'un family contractor', 'ICC', '2QS', '2017-04-02 18:18:48', 'on'),
-(62, 'bran@david.com', 'b667e958ff74690193cc0b53cec66488', 'HM', 'bran', 'david', '12345888', '30-03-2017', 'BD-EU-1234', '', '02-03-2017', '14-03-2017', '500000', 'EU', 'HM', 'consultants', 'SSA', '2QS', '0000-00-00 00:00:00', ''),
-(63, 'narmeen@q.com', 'Qwerty', 'HM', 'narmeen', 'syed', '123456', '30-03-2017', 'NS-AF-1234', '', '18-03-2017', '01-03-2017', '10000', 'AF', 'CH', 'un family contractor', 'ICC', 'RB-10', '0000-00-00 00:00:00', ''),
-(64, 'sasha@a.com', '5e337ead04264089166a00b79d57a582', 'SF', 'sasha', 'agha', '439872934', '01-03-2017', 'SA-AM-4398', '', '03-03-2017', '01-03-2017', '56666', 'AM', 'SF', 'un family contractor', 'ICC', 'RB-10', '2017-03-31 12:53:11', ''),
-(65, 'Q@b.com', 'bb43b7d454472a424636a4df7593cb23', 'SF', 'Q', 'B', '43665365', '31-03-2017', 'QB-AM-4366', '', '04-03-2017', '01-03-2017', '56666', 'AM', 'SF', 'un employee', 'Temporary Appointment', 'RB-10', '2017-03-31 12:54:24', ''),
-(66, 'mv@nv.com', 'a55496588b6cc360b76c59eaa45411a6', 'SF', 'mv', 'nv', '12345888', '31-03-2017', 'MN-1234', '56769887978', '17-03-2017', '01-03-2017', '56666', 'AM', 'SF', 'consultants', 'SSA', '10-RC', '2017-03-31 14:54:38', ''),
-(67, 'mack@af.com', '1b1841903a48cbb95f82ada7dc060720', 'SF', 'mack', 'afron', '40694643', '31-03-2017', 'MA-3594', '290530555', '09-03-2017', '01-03-2017', '20000', 'HQ', 'SF', 'consultants', 'Trygin', 'RB-10', '2017-03-31 16:36:36', ''),
-(68, 'palwasha@y.com', 'ea2c86121ffff7df60b230513c3c758d', 'SF', 'palwasha', 'yousaf', '543396785', '03-04-2017', 'PY-1669', '12334567', '06-04-2017', '08-04-2017', '500000', 'EU', 'SF', 'consultants', 'Trygin', '10-RC', '2017-04-02 19:13:06', '');
+INSERT INTO `users` (`user_id`, `email`, `password`, `user_type`, `firstname`, `lastname`, `deskphone`, `activefrom`, `mobile`, `contractstart`, `contractend`, `peryear`, `continents`, `inforole`, `identity_no`, `finanasdata`, `finanasoption`, `funds`, `lastactivity`, `deactivate`, `created_by`, `new_user_c`, `new_user_e`, `created_by_name`) VALUES
+(78, 'admin@unems.com', 'acbd9ab2f68bea3f5291f825416546a1', 'admin', 'Fahad', 'Test2', '46789335', '11-04-2017', '453454797', '28-01-17', '23-01-17', '45000', 'AF', 'HS', 'FT-AF-4532', 'un employee', 'Fixed Term', '2QS', '2017-04-11 18:09:31', 'off', '', '0000-00-00 00:00:00', 0, ''),
+(79, 'manzarnouman@gmail.com', 'acbd9ab2f68bea3f5291f825416546a1', 'HS', 'Manzar', 'Noman', '325465567', '08-04-2017', '7969656', '01-04-2017', '02-04-2017', '56666', 'AM', 'HS', 'MN-0872', 'un family contractor', 'ICC', '2QS', '2017-04-08 21:10:47', 'on', 'FT-AF-4532', '0000-00-00 00:00:00', 0, ''),
+(80, 'luqman@g.com', '378a19169786f7b4b4c618036a48cba5', 'HS', 'luqman', 'saeed', '956545544', '08-04-2017', '78646895', '02-04-2017', '01-04-2017', '500000', 'AM', 'HS', 'LS-AM-1491664872843', 'un employee', 'Temporary Appointment', '10-RC', '2017-04-08 21:04:14', 'on', 'FT-AF-4532', '0000-00-00 00:00:00', 0, ''),
+(81, 'marita@f.com', '098f6bcd4621d373cade4e832627b4f6', 'HM', 'marita', 'eric', '970643', '10-04-2017', '7654321', '04-04-2017', '01-04-2017', '500000', 'HQ', 'HM', 'ME-HQ-1491665224521', 'un family contractor', 'ICC', 'RB-10', '2017-04-11 18:17:13', 'off', 'FT-AF-4532', '2017-04-08 15:27:24', 0, ''),
+(82, 'faabdullahtariq@gmail.com', 'a291a124f336d8df49f0c5798f91a58d', 'admin', 'Fahad', 'Tariq', '98710', '10-04-2017', '0982990099', '10-04-2017', '30-04-2017', '4100', 'AF', 'CH', 'FT-AF-1491813354291', 'un employee', 'Fixed Term', '2QS', '2017-04-10 13:41:49', 'off', 'FT-AF-4532', '2017-04-10 08:38:46', 0, ''),
+(83, 'khan@ali.com', 'a294b9a1325a7c6b01a614202c5e5599', 'HS', 'ali', 'khan', '435689098765', '11-04-2017', '123456', '06-04-2017', '13-04-2017', '500000', 'EU', 'HS', 'AK-AM-1491854665301', 'un employee', 'Continuous', 'RB-10', '2017-04-11 13:47:49', 'on', 'ME-HQ-1491665224521', '2017-04-10 20:12:14', 0, ''),
+(88, 'test@12.com', '1962186da19ae6cf5c10ccd7e425d59c', 'HS', 'test', 'test1', '612099', '11-04-2017', '67445678', '07-04-2017', '04-04-2017', '', 'AS', 'HS', 'TT-AS-1491855856341', 'consultants', 'Trygin', '2QS', '2017-04-11 17:40:15', 'off', 'ME-HQ-1491665224521', '2017-04-10 20:24:19', 0, ''),
+(90, 'salman@s.com', '2d04c67be2b97d6aa380e5d3b56f2bc2', 'AG', 'salman', 'sal', '34565767', '11-04-2017', '345678', '01-04-2017', '04-03-2017', '500000', 'EU', 'AG', 'SS-EU-1491914448845', 'un family contractor', 'ICC', 'RB-10', '2017-04-11 17:47:38', 'on', 'ME-HQ-1491665224521', '2017-04-11 12:43:16', 0, ''),
+(91, 'jhoni@b.com', '0ebe4bd0d65e2cc1865352681d3523b5', 'AG', 'jhoni', 'bravo', '567789809887', '11-04-2017', '67445678', '01-04-2017', '05-04-2017', '500000', 'AM', 'AG', 'JB-AM-1491914803755', 'un family contractor', 'ICC', '2QS', '2017-04-11 18:27:00', 'on', 'ME-HQ-1491665224521', '2017-04-11 12:46:56', 0, '');
 
 --
 -- Indexes for dumped tables
@@ -76,7 +76,7 @@ INSERT INTO `users` (`id`, `email`, `password`, `user_type`, `fname`, `lname`, `
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -86,7 +86,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

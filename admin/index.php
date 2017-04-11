@@ -1,6 +1,8 @@
 <?php
-session_start();
+
 include 'header.php';
+if (isset($_SESSION['email'])) {
+
 include 'methods/cmethods.php';
 include 'users/selectapi.php';
 $staticURL="";
@@ -11,7 +13,7 @@ if(isset($_GET['act']) && !empty($_GET['act'])){
 if ($staticURL=='mgu') {
 	
 	include 'users/usermanager.php';
-
+      
 }elseif ($staticURL=='mguc') {
 	include 'users/createuser.php';
 }elseif ($staticURL == 'mguin'){
@@ -28,5 +30,8 @@ else{
 }
 
 include 'footer.php';
+}else{
+	// header("Location:../index.php");
+}
 ?>
 
