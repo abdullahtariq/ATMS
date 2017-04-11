@@ -18,7 +18,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 			<div class="form-group pull-right">
 				<div class="row">
 					<div class="col-sm-2 col-sm-offset-3">
-						<a href="index.php?act=mgupdate&id=<?php echo $ftnresult['id'] ; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit">
+						<a href="index.php?act=mgupdate&id=<?php echo $ftnresult['user_id'] ; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit">
 							<input type="button" value="Edit" id="login-submit"  class="btn btn-primary" ></a>
 						</div>
 						
@@ -33,9 +33,9 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 					<tr>
 					<?php $date=date_create($ftnresult['lastactivity']); ?>
 						<th >
-							Name  : <span><?php echo $ftnresult['lname'].$ftnresult ['fname'];?></span><br/>
+							Name  : <span><?php echo $ftnresult['lastname'].$ftnresult ['firstname'];?></span><br/>
 							Email : <?php echo $ftnresult['email'];?><br/>
-							Identification : <?php echo $ftnresult['idnno'];?><br/>
+							Identification : <?php echo $ftnresult['identity_no'];?><br/>
 							Last Login : <?php echo date_format($date, 'd-m-Y h:i:s A');  ?>
 						</th>  
 						
@@ -64,15 +64,15 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 				</thead>
 				<tbody>
 					<tr> 
-						<td><?php echo $ftnresult['dphone']; ?></td>
-						<td><?php echo $ftnresult['Mnumber']; ?></td>
-						<td><?php echo $ftnresult['actfrom'];  ?></td>
-						<td><?php echo $continents[$ftnresult['cnthub']];  ?></td>
-						<td><?php echo $roleINFO[$ftnresult['urole']];  ?></td>
-						<td><?php echo $ftnresult['findata'];?></td>
-						<td><?php echo $ftnresult['finopt'];  ?></td>
-						<td><?php echo $ftnresult['contsrt'];  ?></td>
-						<td><?php echo $ftnresult['contend'];  ?></td>
+						<td><?php echo $ftnresult['deskphone']; ?></td>
+						<td><?php echo $ftnresult['mobile']; ?></td>
+						<td><?php echo $ftnresult['activefrom'];  ?></td>
+						<td><?php echo $continents[$ftnresult['continents']];  ?></td>
+						<td><?php echo $roleINFO[$ftnresult['inforole']];  ?></td>
+						<td><?php echo $ftnresult['finanasdata'];?></td>
+						<td><?php echo $ftnresult['finanasoption'];  ?></td>
+						<td><?php echo $ftnresult['contractstart'];  ?></td>
+						<td><?php echo $ftnresult['contractend'];  ?></td>
 						<td><?php echo $ftnresult['peryear'];  ?></td>
 						<td><?php echo $fundsource[$ftnresult['funds']];  ?></td>
 						

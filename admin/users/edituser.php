@@ -2,7 +2,8 @@
 $id="";
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
-	$id=$_GET['id']; 
+	
+$id=$_GET['id']; 
 
 }
 
@@ -23,7 +24,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 
 
 		<form action="index.php?act=mgusucess" method="POST" enctype="multipart/form-data">
-			<input type="hidden" name="id" value="<?php echo  $ftnresult['id']; ?>">
+			<input type="hidden" name="user_id" value="<?php echo  $ftnresult['user_id']; ?>">
 
 			<div class="common-border">
 				<div class="basicstn">
@@ -33,13 +34,13 @@ $ftnresult=mysqli_fetch_assoc($result);
 					<div class="col-md-6 col-sm-12">
 						<div class="form-group">
 							<label>First Name</label>
-							<input  type="text" class="form-control capitalize" name="fname" value="<?php echo  $ftnresult['fname']; ?>" id="Fname" >
+							<input  type="text" class="form-control capitalize" name="firstname" value="<?php echo  $ftnresult['firstname']; ?>" id="Fname" >
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12">
 						<div class="form-group">
 							<label>Last Name</label>
-							<input  type="text" class="form-control capitalize" name="lname" value="<?php echo  $ftnresult['lname']; ?>" id="Lname" >
+							<input  type="text" class="form-control capitalize" name="lastname" value="<?php echo  $ftnresult['lastname']; ?>" id="Lname" >
 						</div>
 					</div>
 				</div>
@@ -59,7 +60,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 					<div class="col-md-6 col-sm-12">
 						<div class="form-group">
 							<label>Desk Phone</label>
-							<input type="text" class="form-control" name="dphone" value="<?php echo  $ftnresult['dphone']; ?>" id="Dphone" value="">
+							<input type="text" class="form-control" name="deskphone" value="<?php echo  $ftnresult['deskphone']; ?>" id="Dphone" value="">
 						</div>
 					</div>
 				</div>
@@ -72,7 +73,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 								<span class="input-group-addon add-on">
 									<span class="glyphicon glyphicon-calendar"></span>
 								</span>
-								<input readonly="readonly" data-format="hh:mm:ss" name="actfrom" value="<?php echo  $ftnresult['actfrom']; ?>"type='text' class="form-control span2" />
+								<input readonly="readonly" data-format="hh:mm:ss" name="activefrom" value="<?php echo  $ftnresult['activefrom']; ?>"type='text' class="form-control span2" />
 
 							</div>
 
@@ -80,7 +81,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 					</div>
 					<div class="col-md-6 col-sm-12" > 
 						<label for="exampleInputhub1">HUB</label>    		
-						<select id="Cnthub" class="selectpicker" name="cnthub" data-value="<?php echo  $ftnresult['cnthub']; ?>">
+						<select id="Cnthub" class="selectpicker" name="continents" data-value="<?php echo  $ftnresult['continents']; ?>">
 							<option value="AS">Asia</option>
 							<option value="EU">Europe</option>
 							<option value="AM" >America</option>
@@ -94,13 +95,13 @@ $ftnresult=mysqli_fetch_assoc($result);
 						<label>Identification Number</label>
 						<div class="input-group" style="width:100%;">
 
-							<input type="text" class="form-control" name="idnno" value="<?php echo  $ftnresult['idnno']; ?>" id="Idntnumber" readonly="readonly">
+							<input type="text" class="form-control" name="identity_no" value="<?php echo  $ftnresult['identity_no']; ?>" id="Idntnumber" readonly="readonly">
 						</div>
 					</div>
 					<div class="col-md-6 col col-sm-12">
 						<label>Role Information</label>
 						<div class="form-group">
-							<select id="urole" class="selectpicker" name="urole" data-value="<?php echo  $ftnresult['urole']; ?>">
+							<select id="urole" class="selectpicker" name="inforole" data-value="<?php echo  $ftnresult['inforole']; ?>">
 								<option value="CH">Chief</option>
 								<option value="HM">Hub Manager</option>
 								<option value="AG">Agent</option>
@@ -114,7 +115,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 					<div class="col-sm-12 col-md-6">
 						<div class="form-group">
 							<label>Mobile Number</label>
-							<input type="text" class="form-control"  name="Mnumber"  id="Mnumber" value="<?php echo  $ftnresult['Mnumber']; ?>" >
+							<input type="text" class="form-control"  name="mobile"  id="Mnumber" value="<?php echo  $ftnresult['mobile']; ?>" >
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
@@ -129,7 +130,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 					<div class="col-md-6 col-sm-12">
 						<label>Employee Type</label>
 						<div class="form-group">
-							<select onchange="changeOpt(event)" id="findata" class="selectpicker" name="findata" data-value="<?php echo  $ftnresult['findata']; ?>">
+							<select onchange="changeOpt(event)" id="findata" class="selectpicker" name="finanasdata" data-value="<?php echo  $ftnresult['finanasdata']; ?>">
 								<option value="-1">Select One</option>
 								<option value="un employee">UN Employee</option>
 								<option value="un family contractor">UN Family Contractor</option>
@@ -140,7 +141,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 					<div class="col-md-6 col-sm-12">
 						<label id="typefd" style="display: none;">Contract Type</label>
 						<div class="form-group">
-							<input id="selectedFin" type="hidden" value="<?php echo  $ftnresult['finopt']; ?>">
+							<input id="selectedFin" type="hidden" value="<?php echo  $ftnresult['finanasoption']; ?>">
 							<div id="newdrpdown" >
 
 							</div>
@@ -157,7 +158,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 								<span class="input-group-addon add-on">
 									<span class="glyphicon glyphicon-calendar"></span>
 								</span>
-								<input readonly="readonly" data-format="hh:mm:ss" type='text' class="form-control span2" name="contsrt" value="<?php echo  $ftnresult['contsrt']; ?>" />
+								<input readonly="readonly" data-format="hh:mm:ss" type='text' class="form-control span2" name="contractstart" value="<?php echo  $ftnresult['contractstart']; ?>" />
 
 							</div>
 
@@ -170,7 +171,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 								<span class="input-group-addon add-on">
 									<span class="glyphicon glyphicon-calendar"></span>
 								</span>
-								<input readonly="readonly" data-format="hh:mm:ss" type='text' class="form-control span2" name="contend" value="<?php echo  $ftnresult['contend']; ?>" />
+								<input readonly="readonly" data-format="hh:mm:ss" type='text' class="form-control span2" name="contractend" value="<?php echo  $ftnresult['contractend']; ?>" />
 
 							</div>
 

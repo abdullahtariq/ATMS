@@ -29,12 +29,12 @@ session_start();
 		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
        <![endif]-->
        <!-- Libraries CSS -->
-       <link rel="stylesheet" href="css/bootstrap.min-3.css" />
-       <link href="font/font-awesome.min.css" rel="stylesheet"/>
+       <link rel="stylesheet" href="../css/bootstrap.min-3.css" />
+       <link href="../fonts/font-awesome.min.css" rel="stylesheet"/>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css"/>
-       <link rel="stylesheet" type="text/css" href="css/datepicker.css">
+       <link rel="stylesheet" type="text/css" href="../css/datepicker.css">
        <!-- Custom CSS -->
-       <link rel="stylesheet" type="text/css" href="css/style.css">
+       <link rel="stylesheet" type="text/css" href="../css/style.css">
    </head>
 
    <body>

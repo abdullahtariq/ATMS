@@ -41,11 +41,11 @@
 	                <tbody>
 	                <div>
 	             				<tr class="danger">
-							<td ><?php echo $userResult['idnno']; ?></td>
-							<td class="capitalize"><?php echo $userResult['fname'] ?></td>
-							<td class="capitalize"><?php echo $userResult['lname'] ?></td>
+							<td ><?php echo $userResult['identity_no']; ?></td>
+							<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
+							<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
 							<td><?php echo $userResult['email']; ?></td>
-							<td class="text-center"><a  href="index.php?act=mguv&id=<?php echo $userResult['id'] ; ?>"  data-toggle="tooltip" data-placement="bottom" title="Veiw User Detail">
+							<td class="text-center"><a  href="index.php?act=mguv&id=<?php echo $userResult['user_id'] ; ?>"  data-toggle="tooltip" data-placement="bottom" title="Veiw User Detail">
 								<i class="fa fa-eye" aria-hidden="true"></i>
 							</a></td>	
 						</tr>
@@ -55,11 +55,11 @@
                            	
                            	<tbody>
 					<tr>
-						<td><?php echo $userResult['idnno']; ?></td>
-						<td class="capitalize"><?php echo $userResult['fname'] ?></td>
-						<td class="capitalize"><?php echo $userResult['lname'] ?></td>
+						<td><?php echo $userResult['identity_no']; ?></td>
+						<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
+						<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
 						<td><?php echo $userResult['email']; ?></td>
-						<td class="text-center"><a  href="index.php?act=mguv&id=<?php echo $userResult['id'] ; ?>"  data-toggle="tooltip" data-placement="bottom" title="Veiw User Detail">
+						<td class="text-center"><a  href="index.php?act=mguv&id=<?php echo $userResult['user_id'] ; ?>"  data-toggle="tooltip" data-placement="bottom" title="Veiw User Detail">
 							<i class="fa fa-eye" aria-hidden="true"></i>
 						</a></td>
 						
