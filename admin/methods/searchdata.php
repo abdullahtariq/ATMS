@@ -10,23 +10,23 @@
     <?php
       if ($_GET['act']=='mgu') {?>
 
-          <option value="CH">Chief</option>
-          <option value="HM">Hub Manager</option>
-          <option value="AG">Agent</option>
-          <option value="HS">Hub Supervisor</option>
-          <option value="SF">Staff</option>
+          <option value="Chief">Chief</option>
+          <option value="Hub Manager">Hub Manager</option>
+          <option value="Agent">Agent</option>
+          <option value="Hub Supervisor">Hub Supervisor</option>
+          <option value="Staff">Staff</option>
 
     <?php  }elseif($_GET['act']=='hmu') {?>
 
-          <option value="HM">Hub Manager</option>
-          <option value="AG">Agent</option>
-          <option value="HS">Hub Supervisor</option>
+          <option value="Hub Manager">Hub Manager</option>
+          <option value="Agent">Agent</option>
+          <option value="Hub Supervisor">Hub Supervisor</option>
           
     <?php }elseif ($_GET['act']=='hubsu') {?>
 
-          <option value="HM">Hub Manager</option>
-          <option value="AG">Agent</option>
-          <option value="HS">Hub Supervisor</option>
+          <option value="Hub Manager">Hub Manager</option>
+          <option value="Agent">Agent</option>
+          <option value="Hub Supervisor">Hub Supervisor</option>
          
     <?php }  ?>
   

@@ -8,6 +8,8 @@
     $create=$_SESSION['created_by'];
 
     // echo $create;
+    $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
+$roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
      
 ?>
 
@@ -16,9 +18,9 @@
 		<h2>Users Record List</h2>
 	</div><br>
 	
-<?php
-               include '../admin/methods/searchdata.php';
-   		?>
+<!-- <?php
+               // include '../admin/methods/searchdata.php';
+   		?> -->
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered"    >
 				<thead>
@@ -52,8 +54,8 @@
     								<td><?php echo $userResult['deskphone']; ?></td>
     								<td><?php echo $userResult['mobile']; ?></td>
     								<td><?php echo $userResult['activefrom']; ?></td>
-    								<td><?php echo $userResult['continents']; ?></td>
-    								<td><?php echo $userResult['inforole']; ?></td>
+    								<td><?php echo $continents[$userResult['continents']]; ?></td>
+    								<td><?php echo $roleINFO[$userResult['inforole']]; ?></td>
     								<td class="text-center"><a  href="index.php?act=hubsv&id=<?php echo $userResult['user_id'] ; ?>" >
     									<input type="button" class="btn btn-primary" value="Veiw">
     								</a></td>	
@@ -71,8 +73,8 @@
     							<td><?php echo $userResult['deskphone']; ?></td>
     							<td><?php echo $userResult['mobile']; ?></td>
     							<td><?php echo $userResult['activefrom']; ?></td>
-    							<td><?php echo $userResult['continents']; ?></td>
-    							<td><?php echo $userResult['inforole']; ?></td>
+    							<td><?php echo $continents[$userResult['continents']]; ?></td>
+                                    <td><?php echo $roleINFO[$userResult['inforole']]; ?></td>
     							<td class="text-center"><a  href="index.php?act=hubsv&id=<?php echo $userResult['user_id'] ; ?>" >
     									<input type="button" class="btn btn-primary" value="Veiw">
     								</a></td>	

@@ -2,7 +2,9 @@
 <?php 
 
    sendmessages();//ftn cal for success message
-
+$continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
+$roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor","SF"=>"Staff");
+$fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"=>"10 RCR (Cost Recovery)");
  ?>
 
 
@@ -65,14 +67,14 @@
    								<td><?php echo $userResult['deskphone']; ?></td>
    								<td><?php echo $userResult['mobile']; ?></td>
    								<td><?php echo $userResult['activefrom']; ?></td>
-   								<td><?php echo $userResult['continents']; ?></td>
-   								<td><?php echo $userResult['inforole']; ?></td>
+   								<td><?php echo $continents[$userResult['continents']]; ?></td>
+   								<td><?php echo $roleINFO[$userResult['inforole']]; ?></td>
    								<td><?php echo $userResult['finanasdata']; ?></td>
    								<td><?php echo $userResult['finanasoption']; ?></td>
    								<td><?php echo $userResult['contractstart']; ?></td>
    								<td><?php echo $userResult['contractend']; ?></td>
    								<td><?php echo $userResult['peryear']; ?></td>
-   								<td><?php echo $userResult['funds']; ?></td>
+   								<td><?php echo $fundsource[$userResult['funds']]; ?></td>
    								<td class="text-center"><a  href="index.php?act=mguv&id=<?php echo $userResult['user_id'] ; ?>" >
    									<input type="button" class="btn btn-primary" value="Veiw">
    								</a><a href="index.php?act=mgupdate&id=<?php echo $userResult['user_id'] ; ?>"><input type="button" class="btn btn-primary" value="Edit"></a></td>	
@@ -90,14 +92,14 @@
    							<td><?php echo $userResult['deskphone']; ?></td>
    							<td><?php echo $userResult['mobile']; ?></td>
    							<td><?php echo $userResult['activefrom']; ?></td>
-   							<td><?php echo $userResult['continents']; ?></td>
-   							<td><?php echo $userResult['inforole']; ?></td>
+   							<td><?php echo $continents[$userResult['continents']]; ?></td>
+                           <td><?php echo $roleINFO[$userResult['inforole']]; ?></td>
    							<td><?php echo $userResult['finanasdata']; ?></td>
    							<td><?php echo $userResult['finanasoption']; ?></td>
    							<td><?php echo $userResult['contractstart']; ?></td>
    							<td><?php echo $userResult['contractend']; ?></td>
    							<td><?php echo $userResult['peryear']; ?></td>
-   							<td><?php echo $userResult['funds']; ?></td>
+   							<td><?php echo $fundsource[$userResult['funds']]; ?></td>
    							<td class="text-center"><a  href="index.php?act=mguv&id=<?php echo $userResult['user_id'] ; ?>">
    								<input type="button" class="btn btn-primary" value="Veiw">
    							</a><a href="index.php?act=mgupdate&id=<?php echo $userResult['user_id'] ; ?>"><input type="button" class="btn btn-primary" value="Edit"></a></td>
