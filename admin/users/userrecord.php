@@ -21,7 +21,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 			<div class="form-group pull-right">
 				<div class="row">
 					<div class="col-sm-2 col-sm-offset-3">
-						<a href="index.php?act=mgupdate&id=<?php echo $ftnresult['user_id'] ; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit">
+						<a  data-toggle="tooltip" data-placementhref="index.php?act=mgupdate&id=<?php echo $ftnresult['user_id'] ; ?>"="bottom" title="Edit">
 							<input type="button" value="Edit" id="login-submit"  class="btn btn-primary" ></a>
 						</div>
 						
