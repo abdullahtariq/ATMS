@@ -21,6 +21,7 @@ if (mysqli_num_rows( $result)==1) {
  
  mysqli_query($conn,$queryup)or die(mysqli_error());
 $_SESSION['identity_no']=$crntresult['identity_no'];
+$_SESSION['user_type']=$crntresult['user_type'];
 
  if ($crntresult['user_type']=='admin') {
  		

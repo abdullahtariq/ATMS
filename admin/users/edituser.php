@@ -53,7 +53,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope"></span>
 								</span>
-								<input type="email" name="email" value="<?php echo  $ftnresult['email']; ?>" class="form-control" id="Email">
+								<input type="email" name="email" value="<?php echo  $ftnresult['email']; ?>" class="form-control" id="Email" readonly="readonly">
 							</div>
 						</div>
 					</div>

@@ -10,6 +10,7 @@ if (isset($_GET['act']) && !empty($_GET['act'])) {
 }
 
 if ($staticURL=="hubsu") {
+	
 	include 'users/hslist.php';
 }elseif ($staticURL=="hubsv") {
 	include 'users/hsrecord.php';
@@ -18,6 +19,8 @@ if ($staticURL=="hubsu") {
 }
 
 include 'footer.php';
+}else{
+	header("Location:../index.php");
 }
 
 ?>

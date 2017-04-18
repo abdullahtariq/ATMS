@@ -13,6 +13,7 @@ if(isset($_GET['act']) && !empty($_GET['act'])){
 if ($staticURL=='mgu') {
 	
 	include 'users/usermanager.php';
+	
       
 }elseif ($staticURL=='mguc') {
 	include 'users/createuser.php';
@@ -31,7 +32,7 @@ else{
 
 include 'footer.php';
 }else{
-	// header("Location:../index.php");
+	 header("Location:../index.php");
 }
 ?>
 

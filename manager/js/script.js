@@ -21,11 +21,11 @@
      var n=d.getTime();
      // console.log(n);
      n = n.toString()
-    // m=n.substring(9,14)
+    m=n.substring(9,14)
       // console.log(n)
 
  	 // console.log(Fname.charAt(0)+Lname.charAt(0)+Cnthub);
-    var res=Fname.charAt(0).toUpperCase()+Lname.charAt(0).toUpperCase()+"-"+Cnthub+"-"+n;
+    var res=Fname.charAt(0).toUpperCase()+Lname.charAt(0).toUpperCase()+"-"+Cnthub+"-"m;
      
 
     document.getElementById("Idntnumber").value = res;
@@ -128,7 +128,11 @@ function checkemail(val) {
                              
 
 /*--------------END ajax-----------------*/
-           
+     
+
+
+
+      
 
 
 

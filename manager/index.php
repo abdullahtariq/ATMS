@@ -30,5 +30,7 @@ else{
 }
 
 include 'footer.php';
+}else{
+	header("Location:../index.php");
 }
 ?>
