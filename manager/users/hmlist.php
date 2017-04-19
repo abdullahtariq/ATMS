@@ -24,12 +24,12 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
     				</div>
     			</div>
     		</div>
-<!-- <?php
-               // include '../admin/methods/searchdata.php';
+ <?php
+                include '../admin/methods/searchdata.php';
                
-   		?> -->
+   		?> 
     		<div class="table-responsive">
-    			<table class="table table-striped table-bordered"    >
+    			<table class="table table-striped table-bordered" id="tblrecord"   >
     				<thead>
     					<tr>
     						<th>First Name</th>
