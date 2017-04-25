@@ -1,7 +1,8 @@
 <?php
-$email=$_POST['email'];
-//$uniqueStr = generateRandomString();
-$getUser = select('users',$email,'');
+
+/* $email=$_POST['email'];
+$uniqueStr = generateRandomString();
+ $getUser = select('users',$email,'');*/
 
 
 if(mysqli_num_rows($getUser) == 0){

@@ -26,7 +26,7 @@
 
  	 // console.log(Fname.charAt(0)+Lname.charAt(0)+Cnthub);
     var res=Fname.charAt(0).toUpperCase()+Lname.charAt(0).toUpperCase()+"-"+Cnthub+"-"+m;
-     
+     console.log(res);
 
     document.getElementById("Idntnumber").value = res;
     document.getElementById("Idntnumber").focus();
