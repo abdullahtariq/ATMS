@@ -111,7 +111,7 @@ function checkemail(val) {
                            // alert('hit');
                            $.ajax({
                              type:"POST",
-                             url:"/NEWemp-mns/admin/users/emailvali.php",
+                             url:"../admin/users/emailvali.php",
                              data:'email='+val,
                              success:function(data) {
                               
