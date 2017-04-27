@@ -26,7 +26,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 
 			<div class="common-border">
 				<div class="basicstn">
-					<h2>Basic Info</h2>
+					<h2>Personal Information</h2>
 				</div>
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
