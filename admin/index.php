@@ -11,10 +11,7 @@ if(isset($_GET['act']) && !empty($_GET['act'])){
 }
 
 if ($staticURL=='mgu') {
-	
 	include 'users/usermanager.php';
-	
-      
 }elseif ($staticURL=='mguc') {
 	include 'users/createuser.php';
 }elseif ($staticURL == 'mguin'){
@@ -24,7 +21,7 @@ if ($staticURL=='mgu') {
 }elseif ($staticURL=='mgupdate') {
 	include 'users/edituser.php';
 }elseif ($staticURL=='mgusucess') {
-          include 'users/updaterecord.php';
+  include 'users/updaterecord.php';
 }
 else{
 	include 'users/dashboard.php';
@@ -35,4 +32,3 @@ include 'footer.php';
 	 header("Location:../index.php");
 }
 ?>
-
