@@ -1,9 +1,8 @@
 <?php
 
-
-//$uniqueStr = generateRandomString();
+$email=$_POST['email'];
+// $uniqueStr = generateRandomString();
 $getUser = select('users',array("email"=>$email));
-
 if(mysqli_num_rows($getUser) == 0){
 	
 	$query = getInsertQuery('users',$_POST);

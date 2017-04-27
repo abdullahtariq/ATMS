@@ -18,11 +18,11 @@ $roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
 		<h2>Users Record List</h2>
 	</div><br>
 	
-<!-- <?php
-               // include '../admin/methods/searchdata.php';
-   		?> -->
+ <?php
+               include '../admin/methods/searchdata.php';
+   		?> 
 		<div class="table-responsive">
-			<table class="table table-striped table-bordered"    >
+			<table class="table table-striped table-bordered" id="tblrecord">
 				<thead>
 					<tr>
     						<th>First Name</th>
