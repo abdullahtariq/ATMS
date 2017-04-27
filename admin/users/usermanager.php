@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 
    sendmessages();//ftn cal for success message
 $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
@@ -53,13 +53,13 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
    				<?php
    				$ftnresult=select('users',"","");
 
-   				while ($userResult=mysqli_fetch_assoc($ftnresult)) { 
+   				while ($userResult=mysqli_fetch_assoc($ftnresult)) {
 
    					if ($userResult['deactivate']=='on') {?>
 
    					<tbody>
    						<div>
-   							<tr class="danger">
+   							<tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
    								<!-- <td ><?php echo $userResult['identity_no']; ?></td> -->
    								<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
    								<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
@@ -77,14 +77,14 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
    								<td><?php echo $fundsource[$userResult['funds']]; ?></td>
    								<td class="text-center"><a  href="index.php?act=mguv&id=<?php echo $userResult['user_id'] ; ?>" >
    									<input type="button" class="btn btn-primary" value="Veiw">
-   								</a><a href="index.php?act=mgupdate&id=<?php echo $userResult['user_id'] ; ?>"><input type="button" class="btn btn-primary" value="Edit"></a></td>	
+   								</a><a href="index.php?act=mgupdate&id=<?php echo $userResult['user_id'] ; ?>"><input type="button" class="btn btn-primary" value="Edit"></a></td>
    							</tr>
    						</div>
    					</tbody>
    					<?php  }else {?>
 
    					<tbody>
-   						<tr>
+   						<tr id="row-<?php echo $userResult['user_id'] ; ?>" class="showCursor" onclick="editRow(event)">
    							<!-- <td><?php echo $userResult['identity_no']; ?></td> -->
    							<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
    							<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
@@ -108,7 +108,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 
    						</tr>
    					</tbody>
-   					<?php } 
+   					<?php }
 
    				}?>
 
