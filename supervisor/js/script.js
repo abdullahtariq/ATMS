@@ -1,25 +1,22 @@
-/*
+/* 
  * Name:  Manager Screen Scripts
  * Date: 03 21 2017
  * Author: Manzar Noman
- * Methods: Generate Unique ID No,
-            Show hide dropdown for financial data,
-            email validation using ajax,
-            filtering data on grid
- *
- *
+ * Methods: Generate Unique ID No,  
+ * 			
+ * 
  */
 
  function generateRandomNumber(){
-
+ 	 
  	 var Fname=document.getElementById('Fname').value;
  	 var Lname=document.getElementById('Lname').value;
  	 var Email=document.getElementById('Email').value;
  	 var Dphone=document.getElementById('Dphone').value;
  	 var Cnthub=document.getElementById('Cnthub').value;
-
-
-
+    
+  
+  
      var d=new Date();
      var n=d.getTime();
      // console.log(n);
@@ -29,15 +26,15 @@
 
  	 // console.log(Fname.charAt(0)+Lname.charAt(0)+Cnthub);
     var res=Fname.charAt(0).toUpperCase()+Lname.charAt(0).toUpperCase()+"-"+Cnthub+"-"+m;
-
+     
 
     document.getElementById("Idntnumber").value = res;
     document.getElementById("Idntnumber").focus();
  }
-/*-------------------
- Function for financial data
+/*-------------------       
+ Function for financial data        
  --------------------     */
-
+    
     var contractopt=
     [{
     	'contract':'un employee',
@@ -60,14 +57,14 @@
 
     	for (var i = 0; i<contractopt.length ; i++) {
     		// console.log(contractopt[i].option);
-
+    		
     if (contractopt[i].contract==change) {
-
+    	
     	var optwrap=contractopt[i].option;
     	// console.log(optwrap);
     }
 
-
+    		 
     	}
            var newopt=optwrap.split(',');
            var selectFin = document.getElementById('selectedFin');
@@ -79,11 +76,11 @@
              }else{
                 dropdown+='<option>'+newopt[i]+'</option>';
              }
-
+           	 
            };
            dropdown+='</select>';
 
-
+           
            document.getElementById('newdrpdown').innerHTML=dropdown;
            $('.selectpicker_new').selectpicker({
     				size: 5,
@@ -93,7 +90,7 @@
             document.getElementById('pryear').style.display="none";
             document.getElementById('prhour').style.display="none";
             document.getElementById('salaryInput').style.display="block";
-
+            
            if (change=='un employee'|| change=='un family contractor') {
 
            	  document.getElementById('pryear').style.display="block";
@@ -103,19 +100,11 @@
 
            }
     }
-/*-------------------
-Function for editable
---------------------     */
 
-function editRow(event){
-  var id = event.currentTarget.id;
-  var justIdNo = id.split('-')[1];
-  window.location = "index.php?act=mgupdate&id="+justIdNo;
 
-}
 
  /*--------------Check email exist in DB through ajax-----------------*/
-
+ 
 function checkemail(val) {
   // var mailwrapper=document.getElementById('emailwrap');
   // console.log(mailwrapper);
@@ -125,7 +114,7 @@ function checkemail(val) {
                              url:"../admin/users/emailvali.php",
                              data:'email='+val,
                              success:function(data) {
-
+                              
                               $("#msg").html(data);
                               if (data=='Email is alrady exist') {
                                 var mailwrapper=document.getElementById('emailwrap');
@@ -135,13 +124,13 @@ function checkemail(val) {
 
                             }
                           })
-                         }
-
+                         } 
+                             
 
 /*--------------END ajax-----------------*/
 /*=======================
    Search feilds in records
-=========================*/
+=========================*/       
 
 function myFunction(event) {
   var role=document.getElementById('yourole').value;
@@ -154,13 +143,13 @@ function myFunction(event) {
     var table=document.getElementById("tblrecord");
     // console.log(table);
     var tr=table.getElementsByTagName("tr");
+    
 
 
-
-
+    
     // console.log(tr);
 
-
+     
     for (var i = 0; i < tr.length; i++) {
 
       var td=tr[i].getElementsByTagName("td");
@@ -173,7 +162,7 @@ function myFunction(event) {
         // debugger;
           filter=role.toLowerCase();
           console.log(filter);
-       }
+       }  
        // console.log(td.length -1 );
        var TDLength=td.length;
        // console.log(TDLength);
@@ -192,7 +181,7 @@ function myFunction(event) {
 // debugger;
                       console.log(filter);
                      updatedtd.parentElement.style.display="";
-
+                     
                    }
 
                 }
@@ -205,13 +194,24 @@ function myFunction(event) {
  }
 
 
-
-
 /*=================================
  Plugin Intializers
 ==================================*/
 
 $(document).ready(function(){
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
 	$('.selectpicker').selectpicker({
 		  size: 5,
@@ -238,7 +238,7 @@ $(document).ready(function(){
     if(financials){
       changeOpt();
     }
-
+    
   }
   // /* time to edit*/
   var Fundsource=document.getElementById('fndsource');
@@ -260,10 +260,11 @@ $(document).ready(function(){
 	$('#dp3').datepicker({
 		defaultDate: "11/1/2013",
 	});
-
+	
 	$('#dp4').datepicker()
 	$('#dp5').datepicker()
-
+	
   // initialise tooltip
   $('[data-toggle="tooltip"]').tooltip()
 });
+

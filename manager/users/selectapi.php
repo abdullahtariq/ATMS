@@ -4,23 +4,37 @@
     Function for dynamic select Query
  ------------------------------*/
 
-  function select($tableName,$email,$id){
-  	if(!empty($email)){
-  		$query='SELECT * From '.$tableName.' WHERE email="'.$email.'"';
-  	}
-    elseif(!empty($id)){
-      $query='SELECT * From '.$tableName.' WHERE user_id="'.$id.'"';
-    }else{
-  		$query='SELECT * From '.$tableName.' ORDER BY `lastname`';
-  	}
+  function select($tableName,$where){
+     
+      $slct=array();
+  foreach ($where as $key => $value) {
+      
+      $slct[]="$key='$value'";
+
+     }
+    //print_r($slct);
+     if (count($slct)>0) {
+
+      
+     
+       $query='SELECT * From '.$tableName.' WHERE '.$slct[0].' ORDER BY `lastname`';
+        
+}
+// elseif(!empty($email)){
+//       $query='SELECT * From '.$tableName.' WHERE email="'.$email.'"';
+//      }
+//      elseif(!empty($id)){
+//       $query='SELECT * From '.$tableName.' WHERE user_id="'.$id.'"';
+//     }
+    else{
+    $query='SELECT * From '.$tableName;
+   }
   
-    global $conn;
+   global $conn;
     $result =mysqli_query($conn,$query);
-    return $result;
+   return $result;
 
   };
-
-
 /*----------------------------
     Function for dynamic Insert Query
  ------------------------------*/
@@ -52,6 +66,7 @@
     return  $resultint;
           
  };
+ 
 
  /*----------------------------
     Function for dynamic Update Query
@@ -72,8 +87,8 @@
 
 
       }
-        array_push($updtevalues,"user_type='".$updateObject['inforole']."'");    
-             print_r($updtevalues);
+      array_push($updtevalues,"user_type='".$updateObject['inforole']."'"); 
+             // print_r($updtevalues);
        $updatequery= "UPDATE ".$tableName." SET ". implode(',', $updtevalues). " WHERE user_id=".$id."";
       
         global $conn;

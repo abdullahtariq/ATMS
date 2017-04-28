@@ -1,8 +1,21 @@
 <?php
 ///////////////////Login Form/////////////////////
+include 'admin/methods/cmethods.php';
 include 'header.php';
+// print_r($_SESSION);
+   sendmessages(); // ftn cal for error message
+   if (isset($_SESSION)) {
+   	if (isset($_SESSION['user_type'])=="admin") {
+   		header('Location:admin/index.php?act=mgu');
+   	}elseif(isset($_SESSION['user_type'])=="HM"){
+          header('Location:manager/index.php?act=hmu');
+   	}elseif (isset($_SESSION['user_type'])=="HS") {
+   		header('Location:supervisor/index.php?act=hubsu');
+   	}
+   }
 ?>
 <div class="container">
+
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<div class="panel panel-login panel-head">
@@ -56,3 +69,7 @@ include 'header.php';
 	</div>
 </div>
 </div>
+
+<?php 
+  include 'footer.php';
+?>
