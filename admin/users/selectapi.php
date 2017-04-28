@@ -11,7 +11,7 @@
     elseif(!empty($id)){
       $query='SELECT * From '.$tableName.' WHERE user_id="'.$id.'"';
     }else{
-  		$query='SELECT * From '.$tableName;
+  		$query='SELECT * From '.$tableName.' ORDER BY `lastname`';
   	}
   
     global $conn;
@@ -52,47 +52,6 @@
     return  $resultint;
           
  };
- /*function getInsertQuery($tableName,$postObject){
- 	$columnArray = array(); // define column name in array
- 	$columnValues = array(); // define column value in array
- 	
-   	$password = generateRandomString(); // from here we gonna send password/email to user
-
-   
- /*	foreach ($postObject as $key => $value) {// 
- 		array_push($columnArray,$key);           //pushing columns names
- 		array_push($columnValues,'"'.$value.'"'); //pushing columns value
- 	}*/
- 	// Pushing password,usertype into respective array
- 	/*array_push($columnArray,'password');
- 	array_push($columnArray,'user_type');
- 	array_push($columnValues,'"'.md5($password).'"');
- 	
-	array_push($columnValues,$type);*/
-  /*--------   End   -----------*/
-  // var_dump($postObject);
- /* if ($postObject['inforole']=='CH') {
-         $type='"admin"';
-      }else{
-        $type='"'.$postObject['inforole'].'"';
-      }
-   
-   $email=$postObject['email'];
-  
-    var_dump($postObject)."<br><br>";
- 	$query ='INSERT INTO credentials(email,password,user_type) VALUES ("'.$email.'","'.md5($password).'",'.$type.')';
- 
- 	 // echo $query;
-    global $conn;
-    $resultint = mysqli_query($conn,$query)or die(mysqli_error($conn)); 
-    //return  $resultint;
-
-    $chquery='INSERT INTO '.$tableName.'(firstname,lastname,deskphone,activefrom,identity_no,continents,mobile,contractstart,contractend,peryear,inforole,finanasdata,finanasoption,funds,created_by)VALUES ("'.$postObject['firstname'].'","'.$postObject['lastname'].'","'.$postObject['deskphone'].'","'.$postObject['activefrom'].'","'.$postObject['identity_no'].'","'.$postObject['continents'].'","'.$postObject['mobile'].'","'.$postObject['contractstart'].'","'.$postObject['contractend'].'","'.$postObject['peryear'].'","'.$postObject['inforole'].'","'.$postObject['finanasdata'].'","'.$postObject['finanasoption'].'","'.$postObject['funds'].'","'.$postObject['created_by'].'")';
-
-    $resultch=mysqli_query($conn,$chquery)or die(mysqli_error($conn));
-    return $resultch;
-          
- };*/
 
  /*----------------------------
     Function for dynamic Update Query
@@ -113,7 +72,7 @@
 
 
       }
-            
+        array_push($updtevalues,"user_type='".$updateObject['inforole']."'");    
              print_r($updtevalues);
        $updatequery= "UPDATE ".$tableName." SET ". implode(',', $updtevalues). " WHERE user_id=".$id."";
       

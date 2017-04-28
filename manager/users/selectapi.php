@@ -17,7 +17,7 @@
 
       
      
-       $query='SELECT * From '.$tableName.' WHERE '.$slct[0];
+       $query='SELECT * From '.$tableName.' WHERE '.$slct[0].' ORDER BY `lastname`';
         
 }
 // elseif(!empty($email)){
@@ -35,19 +35,6 @@
    return $result;
 
   };
-    
-
-
-
-
-
-
-
-  	 
-   
-   
-
-
 /*----------------------------
     Function for dynamic Insert Query
  ------------------------------*/
@@ -100,7 +87,7 @@
 
 
       }
-            
+      array_push($updtevalues,"user_type='".$updateObject['inforole']."'"); 
              // print_r($updtevalues);
        $updatequery= "UPDATE ".$tableName." SET ". implode(',', $updtevalues). " WHERE user_id=".$id."";
       

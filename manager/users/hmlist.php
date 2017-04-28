@@ -32,8 +32,8 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
     			<table class="table table-striped table-bordered" id="tblrecord"   >
     				<thead>
     					<tr>
+                            <th>Last Name</th>
     						<th>First Name</th>
-    						<th>Last Name</th>
     						<th>Mobile Phone</th>
     						<th>HUB</th>
     						<th>Role Information</th>
@@ -53,10 +53,11 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 
     					<tbody>
     						<div>
-    							<tr class="danger">
+    							<tr class="danger" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
     								<!-- <td ><?php echo $userResult['identity_no']; ?></td> -->
+                                    
+                                    <td class="capitalize"><?php echo $userResult['lastname'] ?></td>
     								<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
-    								<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
     								<td><?php echo $userResult['mobile']; ?></td>
     								<td><?php echo $continents[$userResult['continents']]; ?></td>
                                 <td><?php echo $roleINFO[$userResult['inforole']]; ?></td>
@@ -70,7 +71,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
     					<?php  }else {?>
 
     					<tbody>
-    						<tr>
+    						<tr id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
     							<!-- <td><?php echo $userResult['identity_no']; ?></td> -->
     							<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
     							<td class="capitalize"><?php echo $userResult['firstname'] ?></td>

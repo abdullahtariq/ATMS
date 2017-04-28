@@ -100,7 +100,16 @@
 
            }
     }
+/*-------------------
+Function for editable
+--------------------     */
 
+function editRow(event){
+  var id = event.currentTarget.id;
+  var justIdNo = id.split('-')[1];
+  window.location = "index.php?act=hmupdate&id="+justIdNo;
+
+}
 
 
  /*--------------Check email exist in DB through ajax-----------------*/

@@ -22,18 +22,18 @@ if (mysqli_num_rows( $result)==1) {
  mysqli_query($conn,$queryup)or die(mysqli_error());
 $_SESSION['identity_no']=$crntresult['identity_no'];
 $_SESSION['user_type']=$crntresult['user_type'];
-
+      echo $crntresult['user_type'];
  if ($crntresult['user_type']=='admin') {
  		
-     header('Location:admin/index.php?act=mgu');
+       header('Location:admin/index.php?act=mgu');
 
  }elseif ($crntresult['user_type']=='HM') {
       	
- 	 header('Location:manager/index.php?act=hmu');
+ 	    header('Location:manager/index.php?act=hmu');
 
  }elseif ($crntresult['user_type']=='HS') {
      $_SESSION['created_by']=$crntresult['created_by'];
- 	 header('Location:supervisor/index.php?act=hubsu');
+ 	  header('Location:supervisor/index.php?act=hubsu');
  }
 }else{
 
