@@ -104,7 +104,7 @@
            }
     }
 /*-------------------
-Function for financial data
+Function for editable
 --------------------     */
 
 function editRow(event){

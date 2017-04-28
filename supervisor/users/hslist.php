@@ -24,9 +24,9 @@ $roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered" id="tblrecord">
 				<thead>
-					<tr>
+					<tr>    
+                            <th>Last Name</th>
     						<th>First Name</th>
-    						<th>Last Name</th>
     						<th>Email</th>
     						<th>Desk Phone</th>
     						<th>Mobile Phone</th>
@@ -48,9 +48,9 @@ $roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
 	                <div>
 	             				<tr class="danger">
     								<!-- <td ><?php echo $userResult['identity_no']; ?></td> -->
-    								<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
-    								<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
-    								<td><?php echo $userResult['email']; ?></td>
+
+                                    <td class="capitalize"><?php echo $userResult['lastname'] ?></td>
+    								<td class="capitalize"><?php echo $userResult['firstname'] ?></td>    								<td><?php echo $userResult['email']; ?></td>
     								<td><?php echo $userResult['deskphone']; ?></td>
     								<td><?php echo $userResult['mobile']; ?></td>
     								<td><?php echo $userResult['activefrom']; ?></td>

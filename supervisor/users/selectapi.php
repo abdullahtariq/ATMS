@@ -17,7 +17,7 @@
 
       
      
-       $query='SELECT * From '.$tableName.' WHERE '.$slct[0];
+       $query='SELECT * From '.$tableName.' WHERE '.$slct[0].' ORDER BY `lastname`';
         
 }
 // elseif(!empty($email)){

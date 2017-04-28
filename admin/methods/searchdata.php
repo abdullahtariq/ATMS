@@ -1,37 +1,30 @@
 <?php
-// echo $_GET['act']; 
+ // echo $_GET['act']; 
 ?>
 
 <div class="container">
   
 <div class="form-inline">
   <div class="form-group col-sm-4">
-    <select onchange="myFunction(event)" id="yourole" class="selectpicker" name="inforole">
+    
     <?php
       if ($_GET['act']=='mgu') {?>
-
+            <select onchange="myFunction(event)" id="yourole" class="selectpicker" name="inforole">
           <option value="Chief">Chief</option>
           <option value="Hub Manager">Hub Manager</option>
           <option value="Agent">Agent</option>
           <option value="Hub Supervisor">Hub Supervisor</option>
           <option value="Staff">Staff</option>
-
+            </select>
     <?php  }elseif($_GET['act']=='hmu') {?>
 
-          <option value="Hub Manager">Hub Manager</option>
+          <select onchange="myFunction(event)" id="yourole" class="selectpicker" name="inforole">
           <option value="Agent">Agent</option>
           <option value="Hub Supervisor">Hub Supervisor</option>
-          
-    <?php }elseif ($_GET['act']=='hubsu') {?>
-
-          <option value="Hub Manager">Hub Manager</option>
-          <option value="Agent">Agent</option>
-          <option value="Hub Supervisor">Hub Supervisor</option>
-         
-    <?php }  ?>
-  
+          </select>
+     <?php } ?>
       
-    </select>
+    
 
   </div>
 
