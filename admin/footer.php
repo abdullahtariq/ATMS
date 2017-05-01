@@ -5,4 +5,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
     <script src="../js/validator.js"></script>
     <script src="js/script.js"></script>
+    <script src="../js/common-script.js"></script>
  </html>
