@@ -88,7 +88,7 @@
 
       }
       array_push($updtevalues,"user_type='".$updateObject['inforole']."'"); 
-             // print_r($updtevalues);
+              // print_r($updtevalues);
        $updatequery= "UPDATE ".$tableName." SET ". implode(',', $updtevalues). " WHERE user_id=".$id."";
       
         global $conn;

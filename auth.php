@@ -23,6 +23,7 @@ if (mysqli_num_rows( $result)==1) {
 $_SESSION['identity_no']=$crntresult['identity_no'];
 $_SESSION['user_type']=$crntresult['user_type'];
       echo $crntresult['user_type'];
+$_SESSION['user_id']=$crntresult['user_id'];
  if ($crntresult['user_type']=='admin') {
  		
        header('Location:admin/index.php?act=mgu');
@@ -34,6 +35,9 @@ $_SESSION['user_type']=$crntresult['user_type'];
  }elseif ($crntresult['user_type']=='HS') {
      $_SESSION['created_by']=$crntresult['created_by'];
  	  header('Location:supervisor/index.php?act=hubsu');
+ }elseif ($crntresult['user_type']=='AG') {
+
+ 	header('Location:agents/index.php?act=agu');
  }
 }else{
 
