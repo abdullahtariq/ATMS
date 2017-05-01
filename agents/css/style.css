@@ -1,0 +1,52 @@
+
+.bgcolor{
+     
+     background-color: #bce8f1;	
+}
+.modal-dialog {
+    position: relative;
+    left: 30px;
+}
+.fc-content .fc-time{
+	display: none;
+}
+.info-tbl{
+	margin: 0 auto;
+	width: 100%;
+	margin-top: 20px;
+}
+/*---------------------
+
+--------------------------*/
+.inpt-wrap{
+	padding-top: 45px;
+
+}
+.outline-bottom{
+	border: 1px solid;
+    padding: 20px;
+    background: #E9E9E9;
+    border: 2px #EEE solid;
+}
+.fc-event,.fc-today-button{
+ background-color:#0d83dd !important;
+}
+.bot{
+ background-color:#0d83dd !important;
+ border-color: #0d83dd !important;
+}
+.fc-today-button{
+	color: #FFF !important;
+}
+.fc td{
+	 background-color: #FFF ;
+}
+
+.fc th {
+    background-color: #0d83dd !important;
+    padding: 10px 0 !important;
+    color: #FFF;
+}
+.bd-top{
+	margin-top: 60px;
+}
