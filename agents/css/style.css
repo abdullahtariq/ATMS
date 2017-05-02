@@ -50,3 +50,11 @@
 .bd-top{
 	margin-top: 60px;
 }
+.jump {   
+	position: absolute;
+    top: -23px;
+}
+.jumpalt {  
+      position: absolute;
+     top: -16px;
+}
