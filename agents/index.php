@@ -10,6 +10,7 @@
    	    <script src="js/jquery.min.js"></script>
 	    <script src="js/script.js"></script>
 	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/cal-form-val.js"></script>
 	    <link rel='stylesheet' href='css/style.css' />
 	    <link rel='stylesheet' href='css/bootstrap.css' />
 	    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
@@ -32,17 +33,25 @@
 	<div id="external-events" class="data-input  col-md-3 ">
 		<form   id="form-wrap">
 			<div class="inpt-wrap">
-			<div class="form-group">
+			<div id="myalert"  class="alert alert-success jump" role="alert" collapse>
+            <a href="#"   class="close" onclick="sucess()">&times;</a>
+            <strong> Detail has been submited sucessfully !</strong>
+    </div>
+    <div id="Myalert"  class="alert alert-danger jumpalt" role="alert" collapse>
+          <a href="#" class="close" onclick="hidmsg()" >&times;</a>
+          <strong>Data is already exists</strong>
+   </div>
+			<div class="form-group" style="display: none;">
 					<label for="usr">Start Date</label>
-					<input type="text" id="storeddate" class="form-control" name="strtdate" >
+					<input type="text"  id="storeddate" class="form-control" name="strtdate" >
 				</div>
 				<div class="form-group">
 					<label for="usr">Ticketing Hour</label>
-					<input type="text" class="form-control" id="tick" name="ticketing" >
+					<input type="text" onkeypress='validate(event)' class="form-control" id="tick" name="ticketing" maxlength="1">
 				</div>
 				<div class="form-group">
 					<label for="usr">Meeting Hour</label>
-					<input type="text" class="form-control" id="meet" name="meeting">
+					<input type="text" onkeypress='validate(event)' class="form-control" id="meet" name="meeting" maxlength="1">
 				</div>
 				<div class="form-group">
 					<label for="usr">Leaves</label>
@@ -54,7 +63,7 @@
 				</div>
 				<div class="form-group">
 					<label for="usr">Others</label>
-					<input type="text" class="form-control" id="other" name="others">
+					<input type="text" onkeypress='validate(event)' class="form-control" id="other" name="others" maxlength="1">
 				</div>
 <button type="button"  onclick="submitform(event)" class="btn btn-primary bot">Submit</button> 
 			</div>
@@ -90,11 +99,11 @@
         	</thead>
         	<tbody>
         		<tr>
-        			<td class="dt">MANZAR</td>
-        			<td class="tc">MANZAR</td>
-        			<td class="me">MANZAR</td>
-        			<td class="le">MANZAR</td>
-        			<td class="ot">MANZAR</td>
+        			<td class="dt"></td>
+        			<td class="tc"></td>
+        			<td class="me"></td>
+        			<td class="le"></td>
+        			<td class="ot"></td>
 
         		</tr>
         	</tbody>
