@@ -32,7 +32,7 @@
 	<div id="external-events" class="data-input  col-md-3 ">
 		<form   id="form-wrap">
 			<div class="inpt-wrap">
-			<div class="form-group">
+			<div class="form-group" style="display: none;">
 					<label for="usr">Start Date</label>
 					<input type="text" id="storeddate" class="form-control" name="strtdate" >
 				</div>

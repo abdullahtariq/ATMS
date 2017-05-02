@@ -1,7 +1,7 @@
 
 .bgcolor{
      
-     background-color: #bce8f1;	
+     background-color: #bce8f1 !important;	
 }
 .modal-dialog {
     position: relative;
