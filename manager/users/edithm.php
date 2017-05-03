@@ -51,7 +51,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope"></span>
 								</span>
-								<input type="email" name="email" value="<?php echo  $ftnresult['email']; ?>" class="form-control" id="Email">
+								<input type="email" name="email" value="<?php echo  $ftnresult['email']; ?>" class="form-control" id="Email" readonly="readonly">
 							</div>
 						</div>
 					</div>
@@ -79,7 +79,7 @@ $ftnresult=mysqli_fetch_assoc($result);
 					</div>
 					<div class="col-md-6 col-sm-12" > 
 						<label for="exampleInputhub1">HUB</label>    		
-						<select id="Cnthub" class="selectpicker" name="continents" data-value="<?php echo  $ftnresult['continents']; ?>">
+						<select id="Cnthub" class="selectpicker" name="continents" data-value="<?php echo $_SESSION['continents']; ?>" disabled>
 							<option value="AS">Asia</option>
 							<option value="EU">Europe</option>
 							<option value="AM" >America</option>

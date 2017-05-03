@@ -7,7 +7,10 @@
      // echo $idnos;
     $create=$_SESSION['created_by'];
 
-    // echo $create;
+        $hub=$_SESSION['continents'];
+        // echo $hub;
+
+     // echo $create;
     $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
 $roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
      
@@ -37,8 +40,8 @@ $roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
     					</tr>
 				</thead>
 				<?php
-				$ftnresult=select('users',array("created_by"=>$create));
-				
+				$ftnresult=select('users',array("created_by"=>$create,"continents"=>$hub));
+				 
 
 				while ($userResult=mysqli_fetch_assoc($ftnresult)) { 
 
