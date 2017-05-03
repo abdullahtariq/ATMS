@@ -20,10 +20,13 @@ if (mysqli_num_rows( $result)==1) {
  $queryup= 'UPDATE `users` SET lastactivity=now() Where email="'.$email.'"';
  
  mysqli_query($conn,$queryup)or die(mysqli_error());
-$_SESSION['identity_no']=$crntresult['identity_no'];
-$_SESSION['user_type']=$crntresult['user_type'];
-      echo $crntresult['user_type'];
-$_SESSION['user_id']=$crntresult['user_id'];
+
+   $_SESSION['identity_no']=$crntresult['identity_no'];
+   $_SESSION['user_type']=$crntresult['user_type'];  
+   $_SESSION['user_id']=$crntresult['user_id'];
+   $_SESSION['continents']=$crntresult['continents'];
+
+
  if ($crntresult['user_type']=='admin') {
  		
        header('Location:admin/index.php?act=mgu');

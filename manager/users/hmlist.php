@@ -2,6 +2,7 @@
 <?php     
     sendmessages();//ftn cal for success message
     $idnos=$_SESSION['identity_no'];
+    $hub=$_SESSION['continents'];
      // echo $idnos;
     $continents=array("AS"=>"Asia","EU"=>"Europe","AM"=>"America","AF"=>"Africa","HQ"=>"HQ");
 $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor","SF"=>"Staff");
@@ -44,7 +45,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
     					</tr>
     				</thead>
     				<?php
-    				$ftnresult=select('users',array("created_by"=>$idnos));//where clause in associativearray
+    				$ftnresult=select('users',array("created_by"=>$idnos,"continents"=>$hub));//where clause in associativearray
 
 
     				while ($userResult=mysqli_fetch_assoc($ftnresult)) { 
