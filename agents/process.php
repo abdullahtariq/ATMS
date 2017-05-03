@@ -13,7 +13,7 @@ if($type == 'new') {
   $other  = $_POST['others'];
    
    $slctquery='SELECT * FROM projects WHERE strtdate="'.$start.'" AND user_id="'.$user.'"';
-    echo  $slctquery;
+   // echo  $slctquery;
    $result =mysqli_query($conn,$slctquery);
    if (mysqli_num_rows($result)> 0) {
     
