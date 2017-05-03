@@ -13,7 +13,7 @@ if($type == 'new') {
   $other  = $_POST['others'];
    
    $slctquery='SELECT * FROM projects WHERE strtdate="'.$start.'" AND user_id="'.$user.'"';
-   // echo  $slctquery;
+    echo  $slctquery;
    $result =mysqli_query($conn,$slctquery);
    if (mysqli_num_rows($result)> 0) {
     
@@ -32,7 +32,7 @@ if($type == 'new') {
 }
  if($type == 'fetch') {
      $events = array();
-    $query = mysqli_query($conn, "SELECT * FROM projects");
+    $query = mysqli_query($conn, 'SELECT * FROM projects WHERE user_id="'.$user.'"');
     while($fetch = mysqli_fetch_array($query,MYSQLI_ASSOC)) {
      $e = array();
      $e['id'] = $fetch['id'];
