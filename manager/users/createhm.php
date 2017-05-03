@@ -1,6 +1,7 @@
   <?php    
   
   $idn=$_SESSION['identity_no'];
+  // echo $_SESSION['continents'];
   ?>
   <div class="container">
     <div class="formheading text-center">
@@ -73,14 +74,14 @@
             </div>
             <div class="col-md-6 col-sm-12" > 
               <label for="exampleInputhub1">HUB</label>       
-              <select id="Cnthub" class="selectpicker" name="continents" >
+              <select id="Cnthub" class="selectpicker" name="continents" data-value="<?php echo  $_SESSION['continents']; ?>" disabled>
                 <option value="AS">Asia</option>
                 <option value="EU">Europe</option>
                 <option value="AM" >America</option>
                 <option value="AF">Africa</option>
                 <option value="HQ">HQ</option>
               </select>
-            </div>
+            </div> 
           </div>
           <div class="row">
             <div class="col-md-6 col-sm-12">
