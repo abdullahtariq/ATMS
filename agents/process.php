@@ -13,7 +13,7 @@ if($type == 'new') {
   $other  = $_POST['others'];
    
    $slctquery='SELECT * FROM projects WHERE strtdate="'.$start.'" AND user_id="'.$user.'"';
-    echo  $slctquery;
+    
    $result =mysqli_query($conn,$slctquery);
    if (mysqli_num_rows($result)> 0) {
     
@@ -43,7 +43,7 @@ if($type == 'new') {
      $e['leave'] = $fetch['leave'];
      $e['others'] = $fetch['others'];
      $e['allday'] = false;
-     $e['title']='Veiw Details';
+     // $e['title']='Veiw Details';
      array_push($events, $e);
     }
      echo json_encode($events);

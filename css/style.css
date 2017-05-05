@@ -160,3 +160,24 @@ StyleSheet For Login Form
 .showCursor{
 	cursor: pointer;
 }
+/*----------------
+  styleSheet for Nav-bar
+--------------*/
+.lgOut{
+  color: #FFF !important;
+}
+.headerLogo{
+  color: #FFF !important;
+}
+.navbar-collapse{
+  background: #428bca !important;
+  
+}
+.navbar-inverse{
+  border-color: #428bca !important;
+}
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus{
+    background: #428bca !important;
+}

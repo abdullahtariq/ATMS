@@ -48,18 +48,18 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> 
-                <a href="#" class="navbar-brand scroll-top logo"><b>Neu Profile</b></a>
+                <a href="#" class="navbar-brand scroll-top logo headerLogo"><b>ATRMS</b></a>
             </div>
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id="mainNav">
-                    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+                    <li class="active"><a href="#home" class="scroll-link headerLogo">Home</a></li>
                     
-                    <li><a href="index.php?act=hmu" class="scroll-link">Manage Users</a></li>
+                    <li><a href="index.php?act=hmu" class="scroll-link headerLogo">Manage Users</a></li>
                 </ul>
                 <ul class="nav navbar-nav right-nav" id="mainav">
                    
-                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
+                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out lgOut" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
                 </ul>
                     
                 

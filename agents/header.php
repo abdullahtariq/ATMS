@@ -47,7 +47,7 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> 
-                <a href="#" class="navbar-brand scroll-top logo"><b>Neu Profile</b></a>
+                <a href="#" class="navbar-brand scroll-top logo headerLogo"><b>ATRMS</b></a>
             </div>
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
@@ -58,7 +58,7 @@ session_start();
                 </ul>
                 <ul class="nav navbar-nav right-nav" id="mainav">
                    
-                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
+                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out lgOut" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
                 </ul>
                     <!-- <ul class="nav navbar-nav right-nav" id="mainav">
 
