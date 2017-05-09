@@ -8,27 +8,27 @@ $type=$_POST['type'];
 if($type == 'new') {
   $start= $_POST['strtdate'].'+'.$_POST['zone'];
   $ticket = $_POST['ticketing'];
-  $meet   = $_POST['meeting'];  
+  $meet   = $_POST['meeting'];
   $leave  = $_POST['leave'];
   $other  = $_POST['others'];
-   
+
    $slctquery='SELECT * FROM projects WHERE strtdate="'.$start.'" AND user_id="'.$user.'"';
-    
+
    $result =mysqli_query($conn,$slctquery);
    if (mysqli_num_rows($result)> 0) {
-    
+
     echo json_encode(array('status'=>'failed','message'=>'Data is already existed'));
 
 }else{
 
   $query = "INSERT INTO projects(`user_id`,`strtdate`, `ticketing`, `meeting`, `leave`,`others`) VALUES($user,'$start','$ticket','$meet','$leave','$other')";
- 
+
   $insert = mysqli_query($conn,$query);
    $lastid = mysqli_insert_id($conn);
   echo json_encode(array('status'=>'success','eventid'=>$lastid,'start'=>$start,'ticketing'=>$ticket,'meeting'=>$meet,'leave'=>$leave,'others'=>$other));
-  
+
   }
- 
+
 }
  if($type == 'fetch') {
      $events = array();

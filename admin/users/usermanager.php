@@ -7,10 +7,10 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
 
  ?>
 
-
+ <title>Users' List - ATRMS - United Nations</title>
    <div class="container">
    	<div class="text-center">
-   		<h2>Users Record List</h2>
+   		<h2>Users' List</h2>
    	</div>
    	<div class="panel-body">
    		<div class="col-lg-12">

@@ -1,7 +1,7 @@
 <?php
    include 'header.php';
-    
-  
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,15 +21,15 @@
 		src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"
 		integrity="sha256-erF9fIMASEVmAWGdOmQi615Bmx0L/vWNixxTNDXS4FQ="
 		crossorigin="anonymous"></script>
-	
+
 </head>
 
 
-<body>  
+<body>
 <div class="container bd-top">
 
 <div class="content clearfix outline-bottom">
-	 
+
 	<!-- <div class="col-md-1"></div> -->
 	<div id="calendar" class="col-md-12"></div>
 	</div>
@@ -47,8 +47,8 @@
       </div>
       <div class="modal-body" id="test">
         <div id="external-events" class="data-input">
-		
-	
+
+
         <form   id="form-wrap" style="display: none;">
 			<div class="inpt-wrap">
 			<div id="myalert"  class="alert alert-success jump" role="alert" collapse>
@@ -64,28 +64,30 @@
 					<input type="text"  id="storeddate" class="form-control" name="strtdate" >
 				</div>
 				<div class="form-group">
-					<label for="usr">Ticketing Hours</label>
+
+					<label for="usr">Ticketing hours</label>
 					<input type="text" onkeypress='validate(event)' class="form-control" id="tick" name="ticketing" maxlength="1">
 				</div>
 				<div class="form-group">
-					<label for="usr">Meeting Hours</label>
+					<label for="usr">Meeting hours</label>
 					<input type="text" onkeypress='validate(event)' class="form-control" id="meet" name="meeting" maxlength="1">
 				</div>
-				<div class="form-group">   
-					<label for="usr">Leaves</label>
+				<div class="form-group">
+					<label for="usr">Leaves  <i>(Max 8 Hours)</i></label>
 					<input type="text" onkeypress='validate(event)' class="form-control" id="leaves" name="leave" maxlength="1">
+
 				</div>
 				<div class="form-group">
-					<label for="usr">Others</label>
+					<label for="usr"><i>Others (Max: 8 Hours)</i></label>
 					<input type="text" onkeypress='validate(event)' class="form-control" id="other" name="others" maxlength="1">
 				</div>
-<button type="button"  onclick="submitform(event)" class="btn btn-primary bot">Submit</button> 
+<button type="button"  onclick="submitform(event)" class="btn btn-primary bot">Submit</button>
 			</div>
-                 
-			
+
+
 		</form>
       </div>
-      </div> 
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>

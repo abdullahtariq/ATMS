@@ -15,9 +15,10 @@ $ftnresult=mysqli_fetch_assoc($result);
 // print_r($ftnresult);
 
 ?>
+ <title>Edit <?php echo  $ftnresult['lastname']; ?> <?php echo  $ftnresult['firstname']; ?>- ATRMS - United Nations</title>
 <div class="container">
 	<div class="formheading text-center">
-		<h2>Edit Form Now</h2>
+	<h2>Edit<Br><span style="color:grey;"class="capitalize"><b><i><?php echo  $ftnresult['lastname']; ?> <?php echo  $ftnresult['firstname']; ?></b></i></span></h2>
 	</div> 
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
