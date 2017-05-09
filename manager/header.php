@@ -16,11 +16,11 @@ session_start();
 <link rel="icon" type="ico" href="../favicon.ico" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <!--[if lt IE 9]> 
+
+    <!--[if lt IE 9]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
-    
+
     <meta name="description" content="">
     <meta name="author" content="WebThemez">
     <!--[if lt IE 9]>
@@ -42,7 +42,7 @@ session_start();
     <header class="header">
         <div class="container">
 		<a href="index.php"><img src="../logo.png"style="margin-top:10px;margin-bottom:10px;margin-left:5px;"title="ATRMS"alt="ATRMS"></a>
-		
+
 		<nav class="navbar navbar-inverse" role="navigation">
                 <div class="navbar-header">
                   <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
@@ -50,23 +50,24 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button> 
-               
-			   <a href="#" class="navbar-brand scroll-top logo"><b>ATRMS</b></a>
+                </button>
+
+                <a href="#" class="navbar-brand scroll-top logo headerLogo"><b>ATRMS</b></a>
             </div>
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id="mainNav">
-                    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
-                    
-                    <li><a href="index.php?act=hmu" class="scroll-link"> Users</a></li>
+                    <li class="active"><a href="#home" class="scroll-link headerLogo">Home</a></li>
+
+
+                    <li><a href="index.php?act=hmu" class="scroll-link headerLogo">Manage Users</a></li>
                 </ul>
                 <ul class="nav navbar-nav right-nav" id="mainav">
-                   
-                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
+
+                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out lgOut" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
                 </ul>
-                    
-                
+
+
             </div>
             <!--/.navbar-collapse-->
         </nav>
@@ -77,9 +78,9 @@ session_start();
 <!--/.header-->
 
 <script type="text/javascript">
-    
+
 //     $(function () {
-    
+
 //   $('[data-toggle="tooltip"]').tooltip()
 // })
 </script>
