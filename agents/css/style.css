@@ -85,3 +85,6 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end {
 .navbar-inverse{
   border-color: #428bca !important;
 }
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF !important;
+}

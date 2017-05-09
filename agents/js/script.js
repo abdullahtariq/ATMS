@@ -4,8 +4,7 @@ var zone = "05:30";
 
 $(document).ready(function(event) {
   
-// initialise tooltip
-  $('[data-toggle="tooltip"]').tooltip();
+
 
    $('#myalert').hide();
    $('#Myalert').hide();
@@ -79,6 +78,8 @@ $(document).ready(function(event) {
            defaultView: 'basicWeek',
            firstDay: 1,
          });
+ 
+ 
 
 });
 
