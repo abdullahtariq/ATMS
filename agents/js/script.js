@@ -4,13 +4,12 @@ var zone = "05:30";
 
 $(document).ready(function(event) {
   
+
+
    $('#myalert').hide();
    $('#Myalert').hide();
-$('.selectpicker').selectpicker({
-      size: 5,
-      width : '100%'
 
-  });
+
 
  $.ajax({
    url: 'process.php',
@@ -31,48 +30,62 @@ $('.selectpicker').selectpicker({
 		      //alert('Clicked on: ' + date.format());
           var crntdate=date.format("YYYY-MM-DD[T]HH:MM:SS");
 		      console.log(crntdate);
+          
           $('#storeddate').val(crntdate);
 		     // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-         // console.log(view);
+          console.log(view);
          // console.log(jsEvent);
 		     // alert('Current view: ' + view.name);
          // change the day's background color just for fun
 
          $(this).addClass("bgcolor");
+         $('.modal-bt').trigger('click');
+         document.getElementById('form-wrap').style.display="block";
 
        },
-       eventClick:function (event, jsEvent, view) {
-
-            console.log(event);
-           
-           var newdt=event.start._d;
-           var enddt=new Date(newdt);
-              // console.log(enddt);
-              var DAY=enddt.toDateString();
-              $('.dt').html(DAY);
-              $('.tc').html(event.ticketing);
-              $('.me').html(event.meeting);
-              $('.le').html(event.leave);
-              $('.ot').html(event.others);
-              $('.modal-bt').trigger('click');
-            },
+       eventRender: function(event, element) {
+    element.find(".fc-event-title").remove();
+    element.find(".fc-event-time").remove();
+    var new_description =   
+          ' Hours: ' + event.ticketing + '<br/>'
+        + 'Meeting Hours: ' + event.meeting + '<br/>'
+        + 'Leaves: ' + event.leave + '<br/>'
+        + 'Others:' + event.others + '<br/>'
+    ;
+    element.append(new_description);
+},
+ 
+        // eventClick:function (event, jsEvent, view) {
+        //     document.getElementById('form-wrap').style.display="block";
+        //      // console.log(event);
+        //      //    var newdt=event.start._d;
+        //      //    var enddt=new Date(newdt);
+        //      //   // console.log(enddt);
+        //      //   var DAY=enddt.toDateString();
+        //      //   $('.dt').html(DAY);
+        //      //   $('.tc').html(event.ticketing);
+        //      //   $('.me').html(event.meeting);
+        //      //   $('.le').html(event.leave);
+        //      //   $('.ot').html(event.others);
+                
+        //      },
 
 
             header: {
              left: 'prev,next today',
              right: 'title'
            },
-           editable: true,
-           droppable: true,
-           weekends: false,
+           defaultView: 'basicWeek',
+           firstDay: 1,
          });
+ 
+ 
 
 });
 
 
 function submitform(event) {
-
-
+ 
   var drp=document.getElementById('leaves');
   // console.log(drp.value);
   var ticket=document.getElementById('tick');
@@ -122,18 +135,17 @@ console.log(start);
          if (response.status=='failed') {
              $('#Myalert').show();
              $('#form-wrap')[0].reset();
-             $('.selectpicker').selectpicker('val', '-1');
+             
          }else{
              eventid = response.eventid;
              $('#form-wrap')[0].reset();
-             $('.selectpicker').selectpicker('val', '-1');
+          
              var event = { id:eventid, 
                      start:response.start,
-                     title:'veiw Details',
                      ticketing:response.ticketing,
                      meeting:response.meeting,
                      leave:response.leave,
-                     other:response.other
+                     others:response.others
                      };
         // console.log(event);
       
@@ -141,6 +153,7 @@ console.log(start);
          $('#myalert').show();
         
       }
+
       },
       error: function(e){
         console.log(e.responseText);

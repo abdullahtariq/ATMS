@@ -15,10 +15,10 @@ $roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
 
 
 ?>
-
+<title><?php echo $ftnresult['lastname'].$ftnresult ['lastname'];?> <?php echo $ftnresult['lastname'].$ftnresult ['firstname'];?>'s Details</title>
 <div class="container"> 
      <div class="text-center">
-     	<h2>User Detail</h2>
+     	<h2><?php echo $ftnresult['lastname'].$ftnresult ['firstname'];?>'s Details</h2>
      </div>
 
 		<div class="table-responsive">

@@ -72,5 +72,11 @@ function myFunction(event) {
 
    }
  }
+$(document).ready(function(){
+
+// initialise tooltip
+  $('[data-toggle="tooltip"]').tooltip()
 
 
+
+});

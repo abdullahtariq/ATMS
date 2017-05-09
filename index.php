@@ -22,7 +22,7 @@ include 'header.php';
 				<div class="panel-heading ">
 					<div class="row">
 						<div class="col-xs-12 text-center">
-							<h2>Login</h2>
+						<img src="logo.png"style="margin-top:10px;margin-bottom:10px;margin-left:5px;"title="ATRMS"alt="ATRMS">
 						</div>
 						
 					</div>
@@ -54,7 +54,7 @@ include 'header.php';
 								<div class="form-group" > 
 									<div class="col-lg-12">
 										<div class="text-center">
-											<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+											<a href="#" tabindex="5" class="forgot-password">Forgot Password?</a>
 										</div>
 									</div>
 								</div>

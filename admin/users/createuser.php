@@ -2,9 +2,10 @@
   
    $idn=$_SESSION['identity_no'];
   ?>
+  <title>Create a new user - ATRMS - United Nations</title>
   <div class="container">
   	<div class="formheading text-center">
-  		<h2>Register Now</h2>
+  		<h2>Create a new User</h2>
   	</div> 
   	<div class="col-md-1"></div>
   	<div class="col-md-10">
