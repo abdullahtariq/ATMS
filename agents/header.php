@@ -62,13 +62,10 @@ session_start();
 
                     <li><a href="#" class="scroll-link"> Download my Report</a></li>
                 </ul>
-                <ul class="nav navbar-nav right-nav" id="mainav">
+                 <ul class="nav navbar-nav right-nav" id="mainav">
 
-                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
-                </ul>           <!-- <ul class="nav navbar-nav right-nav" id="mainav">
-
-                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
-                </ul> -->
+                    <li><a href='../logout.php' class="glyphicon glyphicon-log-out lgOut" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
+                </ul>
 
             </div>
             <!--/.navbar-collapse-->
