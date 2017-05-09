@@ -12,6 +12,8 @@ session_start();
 <html lang="en-gb" class="no-js">
 <!--<![endif]-->
 <head>
+<link rel="icon" type="ico" href="../favicon.ico" />
+<title>Input Hours - ATRMS - United Nations</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -39,7 +41,9 @@ session_start();
    <body>
     <header class="header">
         <div class="container">
-            <nav class="navbar navbar-inverse" role="navigation">
+		<a href="index.php"><img src="../logo.png"style="margin-top:10px;margin-bottom:10px;margin-left:5px;"title="ATRMS"alt="ATRMS"></a>
+		
+		<nav class="navbar navbar-inverse" role="navigation">
                 <div class="navbar-header">
                   <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
                     <span class="sr-only">Toggle navigation</span>
@@ -47,20 +51,20 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> 
-                <a href="#" class="navbar-brand scroll-top logo"><b>Neu Profile</b></a>
+               
+			   <a href="#" class="navbar-brand scroll-top logo"><b>ATRMS</b></a>
             </div>
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id="mainNav">
-                    <!-- <li class="active"><a href="#home" class="scroll-link">Home</a></li> -->
+                    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
                     
-                    <!-- <li><a href="index.php?act=mgu" class="scroll-link">Manage Users</a></li> -->
+                    <li><a href="#" class="scroll-link"> Download my Report</a></li>
                 </ul>
                 <ul class="nav navbar-nav right-nav" id="mainav">
                    
                     <li><a href='../logout.php' class="glyphicon glyphicon-log-out" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
-                </ul>
-                    <!-- <ul class="nav navbar-nav right-nav" id="mainav">
+                </ul>           <!-- <ul class="nav navbar-nav right-nav" id="mainav">
 
                     <li><a href='../logout.php' class="glyphicon glyphicon-log-out" data-toggle="tooltip" data-placement="bottom" title="Logout"> </a></li>
                 </ul> -->

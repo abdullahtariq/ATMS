@@ -15,10 +15,10 @@
 $roleINFO= array("HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor");
      
 ?>
-
+<title>Users' List - ATRMS - United Nations</title>
 <div class="container">
 	<div class="text-center">
-		<h2>Users Record List</h2>
+		<h2>Users' List</h2>
 	</div><br>
 	
  <?php

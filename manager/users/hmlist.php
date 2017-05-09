@@ -8,10 +8,10 @@
 $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supervisor","SF"=>"Staff");
 $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"=>"10 RCR (Cost Recovery)");
     ?>
-
+<title>Users' List - ATRMS - United Nations</title>
     <div class="container">
     	<div class="text-center">
-    		<h2>Users Record List</h2>
+    		<h2>Users' List</h2>
     	</div>
     	<div class="panel-body">
     		<div class="col-lg-12">

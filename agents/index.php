@@ -46,15 +46,15 @@
 					<input type="text"  id="storeddate" class="form-control" name="strtdate" >
 				</div>
 				<div class="form-group">
-					<label for="usr">Ticketing Hour</label>
+					<label for="usr">Work hours</label>
 					<input type="text" onkeypress='validate(event)' class="form-control" id="tick" name="ticketing" maxlength="1">
 				</div>
 				<div class="form-group">
-					<label for="usr">Meeting Hour</label>
+					<label for="usr">Meeting hours</label>
 					<input type="text" onkeypress='validate(event)' class="form-control" id="meet" name="meeting" maxlength="1">
 				</div>
 				<div class="form-group">
-					<label for="usr">Leaves</label>
+					<label for="usr">Leave <i>(Max 8 Hours)</i></label>
 					<select id="leaves" class="selectpicker" name="leave" >
   							<option value="-1">Select</option>
   							<option value="8">Full day</option>
@@ -62,7 +62,7 @@
   						</select>
 				</div>
 				<div class="form-group">
-					<label for="usr">Others</label>
+					<label for="usr"><i>Others (Max: 8 Hours)</i></label>
 					<input type="text" onkeypress='validate(event)' class="form-control" id="other" name="others" maxlength="1">
 				</div>
 <button type="button"  onclick="submitform(event)" class="btn btn-primary bot">Submit</button> 
