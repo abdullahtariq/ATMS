@@ -45,7 +45,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
     					</tr>
     				</thead>
     				<?php
-    				$ftnresult=select('users',array("created_by"=>$idnos,"continents"=>$hub));//where clause in associativearray
+    				$ftnresult=select('users',array("continents"=>$hub));//where clause in associativearray
 
 
     				while ($userResult=mysqli_fetch_assoc($ftnresult)) { 
