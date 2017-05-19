@@ -181,3 +181,16 @@ StyleSheet For Login Form
 .navbar-inverse .navbar-nav>.active>a:focus{
     background: #428bca !important;
 }
+
+/*----------------
+  styleSheet for Edit-Form
+--------------*/
+.border-wrap{
+
+    border-radius: 4px;
+    background-color: #EEE;
+    
+}
+.idn{
+    border-radius: 4px !important;
+}

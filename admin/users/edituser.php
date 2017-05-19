@@ -54,7 +54,10 @@ $ftnresult=mysqli_fetch_assoc($result);
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope"></span>
 								</span>
-								<input type="email" name="email" value="<?php echo  $ftnresult['email']; ?>" class="form-control" id="Email" readonly="readonly">
+								<span class="border-wrap form-control">
+									<span class="mail"><?php echo $ftnresult['email'];  ?></span>
+								</span>
+								
 							</div>
 						</div>
 					</div>
@@ -94,9 +97,10 @@ $ftnresult=mysqli_fetch_assoc($result);
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
 						<label>Identification Number</label>
-						<div class="input-group" style="width:100%;">
-
-							<input type="text" class="form-control" name="identity_no" value="<?php echo  $ftnresult['identity_no']; ?>" id="Idntnumber" readonly="readonly">
+						<div class="input-group" style="width:100%;"> 
+                             <span class="border-wrap form-control idn">
+                             	<span class="identity"><?php echo $ftnresult['identity_no']; ?></span>
+                             </span>	
 						</div>
 					</div>
 					<div class="col-md-6 col col-sm-12">
