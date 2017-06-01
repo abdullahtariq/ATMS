@@ -6,4 +6,6 @@
     <script src="../js/validator.js"></script>
     <script src="js/script.js"></script>
     <script src="../js/common-script.js"></script>
+    <script  src="../js/html2canvas.js"></script>
+    <script  src="../js/jspdf.min.js"></script>
  </html>

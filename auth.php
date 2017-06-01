@@ -25,6 +25,8 @@ if (mysqli_num_rows( $result)==1) {
    $_SESSION['user_type']=$crntresult['user_type'];  
    $_SESSION['user_id']=$crntresult['user_id'];
    $_SESSION['continents']=$crntresult['continents'];
+   $_SESSION['peryear']=$crntresult['peryear'];
+
 
 
  if ($crntresult['user_type']=='admin') {

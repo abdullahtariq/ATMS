@@ -53,7 +53,15 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
 
    					<tbody>
    						<div>
-   							<tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+                     <?php
+                      if ($userResult['inforole']=="AG") {?>
+                            
+                            <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
+
+                    <?php  }else{?>
+
+                            <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+                  <?php  } ?>
    								<!-- <td ><?php echo $userResult['identity_no']; ?></td> -->
                            <td class="capitalize"><?php echo $userResult['lastname'] ?></td>
    								<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
@@ -70,7 +78,16 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
    					<?php  }else {?>
 
    					<tbody>
-   						<tr id="row-<?php echo $userResult['user_id'] ; ?>" class="showCursor" onclick="editRow(event)">
+                  <?php
+                      if ($userResult['inforole']=="AG") {?>
+                            
+                            <tr class="showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
+
+                    <?php  }else{?>
+                               
+                            <tr class="showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+                  <?php  } ?>
+   						
    							<!-- <td><?php echo $userResult['identity_no']; ?></td> -->
    							<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
    							<td class="capitalize"><?php echo $userResult['firstname'] ?></td>

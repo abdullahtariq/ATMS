@@ -181,3 +181,104 @@ StyleSheet For Login Form
 .navbar-inverse .navbar-nav>.active>a:focus{
     background: #428bca !important;
 }
+
+/*----------------
+  styleSheet for Edit-Form
+--------------*/
+.border-wrap{
+
+    border-radius: 4px;
+    background-color: #EEE;
+    
+}
+.idn{
+    border-radius: 4px !important;
+}
+/*----------------
+  styleSheet for Reports
+--------------*/
+span.N{
+   font-size: 15px;
+   font-weight: 100;
+   padding-right: 20px;
+}
+span.n-hub{
+    padding-right: 50px !important;
+}
+span.m-Hub{
+    padding-left: 72px !important;
+}
+span.M{
+    font-size: 15px;
+    padding-left:10px;
+    text-transform: uppercase;
+}
+span.m-Fst{
+    padding-left: 42px;
+}
+span.m-Lst{
+    padding-left: 50px;
+}
+span.n-srt {
+    padding-right: 7px !important;
+}
+span.m-act {
+    padding-left: 33px !important;
+}
+.single{
+    padding-left: 20px;
+    color: #2f5396;
+}
+.left-tbl thead>tr>th{
+    border-bottom:1px !important;
+    border-top: 1px !important;
+}
+span.rght-mbl {
+    padding-left: 72px !important;
+}
+span.lft-mbl {
+    padding-right: 37px !important;
+}
+span.rght-dsk {
+    padding-left: 46px !important;
+}
+span.lft-role {
+    padding-left: 64px !important;
+}
+span.lft-no {
+    padding-right: 11px !important;
+}
+span.rght-end {
+    padding-left: 25px !important;
+}
+span.lft-type {
+    padding-left: 19px;
+}
+.tale-strip-color>.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #d9e2f3 ;
+}
+.table-wrap{
+    border:1px #8ea9db solid ;
+}
+.table-wrap td{
+    border-left:1px #8ea9db solid ;
+    border-bottom: 1px #8ea9db solid ;
+
+}
+.table-wrap th{
+    border-bottom: 1px #8ea9db solid ;
+
+}
+.table-head{
+    background: #4270c4;
+    color:#FFF;
+}
+.bg-grey{
+    background: #a6a6a6 !important;
+}
+.search{
+    padding-top: 24px;
+}
+.down_pdf{
+    padding-top: 18px;
+}

@@ -1,6 +1,7 @@
   <?php    
   
    $idn=$_SESSION['identity_no'];
+  
   ?>
   <title>Create a new user - ATRMS - United Nations</title>
   <div class="container">
