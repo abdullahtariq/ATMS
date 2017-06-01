@@ -194,8 +194,60 @@ function myFunction(event) {
 
    }
  }
+/*=================================
+ search filtration through date range
+==================================*/
+ function showDate(event) {
+    var toDate=document.getElementById('strt-dt').value;
+    var fromDate=document.getElementById('end-dt').value;
+      var id=document.getElementById('urlId').value;
+      // console.log(id);
+    $.ajax({
+     type:"POST",
+     url:"methods/getDate.php",
+     data:{'strtdate':toDate,'post_at_to_date':fromDate,'url_id':id},
+     dataType: "html",
+     success:function(data) {
+       $("#tabular").html(data);
+       // console.log(data.length);
+      
+     }
 
 
+    })
+
+
+ }
+
+ /*=================================
+ Download PDF
+==================================*/
+
+function genPDF() {
+                // body...
+
+//                 html2canvas(document.body, {
+//   onrendered: function(canvas) {
+//     document.body.appendChild(canvas);
+//   }
+// });
+                html2canvas(document.getElementById('page'),{
+                  onrendered: function (canvas) {
+                   //var img = new Image();
+              //img.setAttribute('crossOrigin', 'anonymous');
+              var img = canvas.toDataURL("image/png", 1.0);
+               //document.body.appendChild(canvas);
+              var doc= new jsPDF('landscape');
+              doc.addImage(img,'JPEG', 10, 10, 280, 130);
+              doc.save('test.pdf');
+
+            //  img.src = url;
+                    
+                    //var doc = new jsPDF();
+                    //doc.addImage(img,'JPEG',20,20);
+                  }
+                });
+              }
 
 
 /*=================================

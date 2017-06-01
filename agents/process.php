@@ -6,8 +6,9 @@ include '../common-sql.php';
   // echo $user."<br>";
 $type=$_POST['type'];
 if($type == 'new') {
-  $start= $_POST['strtdate'].'+'.$_POST['zone'];
+  $start  = $_POST['strtdate'].'+'.$_POST['zone'];
   $ticket = $_POST['ticketing'];
+  $train  =$_POST['training'];
   $meet   = $_POST['meeting'];
   $leave  = $_POST['leave'];
   $other  = $_POST['others'];
@@ -21,11 +22,11 @@ if($type == 'new') {
 
 }else{
 
-  $query = "INSERT INTO projects(`user_id`,`strtdate`, `ticketing`, `meeting`, `leave`,`others`) VALUES($user,'$start','$ticket','$meet','$leave','$other')";
+  $query = "INSERT INTO projects(`user_id`,`strtdate`, `ticketing`,`training`, `meeting`, `leave`,`others`) VALUES($user,'$start','$ticket','$train','$meet','$leave','$other')";
 
   $insert = mysqli_query($conn,$query);
    $lastid = mysqli_insert_id($conn);
-  echo json_encode(array('status'=>'success','eventid'=>$lastid,'start'=>$start,'ticketing'=>$ticket,'meeting'=>$meet,'leave'=>$leave,'others'=>$other));
+  echo json_encode(array('status'=>'success','eventid'=>$lastid,'start'=>$start,'ticketing'=>$ticket,'training'=>$train,'meeting'=>$meet,'leave'=>$leave,'others'=>$other));
 
   }
 
@@ -39,6 +40,7 @@ if($type == 'new') {
      $e['start'] = $fetch['strtdate'];
      $e['end'] = $fetch['enddate'];
      $e['ticketing'] = $fetch['ticketing'];
+     $e['training'] =$fetch['training'];
      $e['meeting'] = $fetch['meeting'];
      $e['leave'] = $fetch['leave'];
      $e['others'] = $fetch['others'];
