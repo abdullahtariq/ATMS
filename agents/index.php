@@ -64,9 +64,12 @@
 					<input type="text"  id="storeddate" class="form-control" name="strtdate" >
 				</div>
 				<div class="form-group">
-
-					<label for="usr">Ticketing hours</label>
+					<label for="usr">Works hours</label>
 					<input type="text" onkeypress='validate(event)' class="form-control" id="tick" name="ticketing" maxlength="1">
+				</div>
+				<div class="form-group">
+					<label for="usr">Training hours</label>
+					<input type="text" onkeypress='validate(event)' class="form-control" id="tick" name="training" maxlength="1">
 				</div>
 				<div class="form-group">
 					<label for="usr">Meeting hours</label>

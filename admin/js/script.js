@@ -20,3 +20,9 @@ function editRow(event){
   window.location = "index.php?act=mgupdate&id="+justIdNo;
 
 }
+function showRow(event) {
+	
+	var showId=event.currentTarget.id;
+	var onlyId=showId.split('-')[1];
+	window.location="index.php?act=mguv&id="+onlyId;
+	}

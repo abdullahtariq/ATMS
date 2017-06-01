@@ -6,7 +6,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 $id=$_GET['id']; 
 
 }
-
+print_r($_SESSION) ;
 $result = select("users","",$id);
 
 // echo mysql_num_rows($result);
