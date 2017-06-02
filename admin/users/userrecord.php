@@ -38,7 +38,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 			</div>
 		</div>
           <!-- <form method="post" action="users/searchDate.php"> -->
-          <div class="col-md-2"></div>
+          <div class="col-md-1"></div>
           <div class="row ">
                <div class="col-md-4 col-sm-12">
                     <div class="form-group">
@@ -72,16 +72,16 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
           <!-- </form> -->
           
          
-          
-           <div id="page">
-           <div class="row">
-           <div class="col-md-3">
-          <h2 class="single">SINGLE USER:</h2>
-          </div>
           <div class="down_pdf">
           <button type="button" class="btn btn-primary" onclick="genPDF()">Download</button>
           </div>
+           <div id="page">
+           
+           <div class="col-md-3">
+          <h2 class="single">SINGLE USER:</h2>
           </div>
+          
+         
           
           <div class="table-responsive">
             <table class="table  left-tbl" >
@@ -172,8 +172,14 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
             $totalMeet = $totalMeet + $agReport['meeting'];
             $totalLeave = $totalLeave + $agReport['leave'];
             $totalOther = $totalOther + $agReport['others'];  
-            $totalHr=$agReport['ticketing']+$agReport['training']+
+            if ($ftnresult['finanasdata']=='consultants') {
+               $totalHr=$agReport['ticketing']+$agReport['training']+
+            $agReport['meeting']+$agReport['others'];
+            }else{
+               $totalHr=$agReport['ticketing']+$agReport['training']+
             $agReport['meeting']+$agReport['leave']+$agReport['others'];
+            }
+           
             $allday= $allday+$totalHr;
             $perYear=$ftnresult['peryear']/1600*$totalHr;
             $totalCost=$totalCost+$perYear;
