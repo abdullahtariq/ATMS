@@ -226,7 +226,7 @@ span.m-act {
     padding-left: 33px !important;
 }
 .single{
-    padding-left: 20px;
+    padding-left: 6px;
     color: #2f5396;
 }
 .left-tbl thead>tr>th{
@@ -280,5 +280,6 @@ span.lft-type {
     padding-top: 24px;
 }
 .down_pdf{
-    padding-top: 18px;
+    float: right;
+    padding-top: 17px;
 }
