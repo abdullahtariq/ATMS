@@ -250,11 +250,55 @@ function genPDF() {
               }
 
 
+function veiwreport(){
+  var check= $('.mybox');
+     var id_string;
+  for (var i = 0; i < check.length; i++) {
+    // console.log(check[i]);
+    var A=$(check[i]).prop('checked');
+    if(A){
+      
+  // console.log(A);
+  var Get_id=$(check[i]).parent().parent();
+  // console.log($('A').prop('tr'));
+  var Row_id=$(Get_id).attr('id');
+  var result =Row_id .split('-');
+  var  sep_id=result[1] ;
+   // v=sep_id;
+// var myCustomString = "myvalue"+sep_id;
+
+    id_string+=sep_id+",";
+  // console.log(sep_id.join());
+  
+}
+      // console.log($('.mybox').prop('checked'));
+  }
+     var slicing=id_string.slice(9);
+     var updated_ids=slicing.slice(0, -1);
+     window.location = "users/multiuser.php?id="+updated_ids;
+}
+
 /*=================================
  Plugin Intializers
 ==================================*/
 
 $(document).ready(function(){
+
+
+ $("#main-box").click(function () {
+     $('input:checkbox:not(:disabled)').not(this).prop('checked', this.checked);
+     
+ });
+
+$('.mybox').click(function(e){
+// e.preventDefault();
+
+e.stopPropagation();
+
+});
+
+
+
 
 	$('.selectpicker').selectpicker({
 		  size: 5,
