@@ -26,3 +26,8 @@ function showRow(event) {
 	var onlyId=showId.split('-')[1];
 	window.location="index.php?act=mguv&id="+onlyId;
 	}
+  function checkbox() {
+    // body...
+    // console.log(event.currentTarget.id);
+console.log(document.getElementById('selct'));
+  }

@@ -33,6 +33,7 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
    				<thead>
    					<tr>
    						<!-- <th>Id</th> -->
+                     <th><input class="main_box" type="checkbox" id="main-box"   name="main-box" ></th>
    						<th>Last Name</th>
                      <th>First Name</th>
    						<th>Mobile Phone</th>
@@ -57,10 +58,12 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
                       if ($userResult['inforole']=="AG") {?>
                             
                             <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
+                             <td class="text-center"><input class="mybox" type="checkbox" id="check-box"   name="check-box" disabled="disabled"></td>
 
                     <?php  }else{?>
 
                             <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+                            <td></td>
                   <?php  } ?>
    								<!-- <td ><?php echo $userResult['identity_no']; ?></td> -->
                            <td class="capitalize"><?php echo $userResult['lastname'] ?></td>
@@ -82,10 +85,12 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
                       if ($userResult['inforole']=="AG") {?>
                             
                             <tr class="showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
+                            <td class="text-center"><input  type="checkbox" class="mybox" id="check-box"  name="check-box"></td>
 
                     <?php  }else{?>
                                
                             <tr class="showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+                            <td></td>
                   <?php  } ?>
    						
    							<!-- <td><?php echo $userResult['identity_no']; ?></td> -->
@@ -105,6 +110,19 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
    				}?>
 
    			</table>
+            <div class="panel-body">
+         <div class="col-lg-12">
+            <div class="form-group pull-right">
+               <div class="row">
+                  <div class="col-sm-2 col-sm-3">
+                     
+                        <input  type="button" value="Veiw Reports" id="veiw-rep" onclick="veiwreport()"  class="btn btn-primary" >
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
    		</div>
 
    	</div>
