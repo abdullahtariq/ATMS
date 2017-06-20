@@ -17,6 +17,12 @@ function editRow(event){
   window.location = "index.php?act=hmupdate&id="+justIdNo;
 
 }
+function showRow(event) {
+	
+	var showId=event.currentTarget.id;
+	var onlyId=showId.split('-')[1];
+	window.location="index.php?act=hmv&id="+onlyId;
+	}
 
 
 

@@ -145,19 +145,17 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
     $totalHr=$agReport['ticketing']+$agReport['training']+
     $agReport['meeting']+$agReport['leave']+$agReport['others'];
     $allday= $allday+$totalHr;
+     // echo $allday;
      if ($ftnresult['finanasdata']=='consultants') {
 
      $perHour=$ftnresult['peryear'];
      $percost=$perHour*$totalLeave;
-$perYear=$ftnresult['peryear']*$totalHr;
+     $perYear=$ftnresult['peryear']*$totalHr;
 
    }else{
       $perYear=$ftnresult['peryear']/1600*$totalHr;
    }
-    
-
    
-
      $totalCost=$totalCost+$perYear;
 ?>
 
@@ -187,6 +185,7 @@ $perYear=$ftnresult['peryear']*$totalHr;
      <td><b><?php echo $allday; ?></b></td>
      <td><b>
        <?php 
+
        if ($ftnresult['finanasdata']=='consultants') {
         echo $totalCost-$percost;
       }else{
@@ -197,8 +196,9 @@ $perYear=$ftnresult['peryear']*$totalHr;
 </tr>
 
 </table>
+
 </div>
 </div>
-</div
+</div>
 
 

@@ -54,7 +54,15 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 
     					<tbody>
     						<div>
-    							<tr class="danger" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+                            <?php
+                      if ($userResult['inforole']=="AG") {?>
+                            
+                            <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
+
+                    <?php  }else{?>
+
+                            <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+                  <?php  } ?>
     								<!-- <td ><?php echo $userResult['identity_no']; ?></td> -->
                                     
                                     <td class="capitalize"><?php echo $userResult['lastname'] ?></td>
@@ -72,7 +80,15 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
     					<?php  }else {?>
 
     					<tbody>
-    						<tr id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+    						<?php
+                      if ($userResult['inforole']=="AG") {?>
+                            
+                            <tr class="showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
+
+                    <?php  }else{?>
+                               
+                            <tr class="showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
+                  <?php  } ?>
     							<!-- <td><?php echo $userResult['identity_no']; ?></td> -->
     							<td class="capitalize"><?php echo $userResult['lastname'] ?></td>
     							<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
