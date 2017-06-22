@@ -67,8 +67,15 @@
  			</tr> 
  			
 <?php
-		for ($i=0; $i < count($empty_array); $i++) { ?>
-   
+
+
+		for ($i=0; $i < count($empty_array); $i++) { 
+      $check=$empty_array[$i]['ticketing'];
+      $check=$empty_array[$i]['training'];
+      $check=$empty_array[$i]['leave'];
+      $check=$empty_array[$i]['meeting'];
+      
+   if (count($check)>0) { ?>
              <tr class="text-center" id="selct"> 
           <td><?php echo $empty_array[$i]['lastname'];  ?></td>
           <td><?php echo $empty_array[$i]['firstname'];  ?></td>
@@ -102,6 +109,7 @@
         </tr> 
 
 <?php } 
+}
  			
  			function getProjects($id){
  				include '../../common-sql.php';
@@ -136,8 +144,6 @@
  					$fin_opt=$u['finanasoption'];
  					$con_srt=$u['contractstart'];
  					$con_end=$u['contractend'];
-
-
  					$Twork=$Twork+ $ag['ticketing'];
  					$Ttrain=$Ttrain+ $ag['training'];
  					$Tmeet=$Tmeet+ $ag['meeting'];
@@ -164,14 +170,11 @@
  						$T_cost=$u['peryear']/1600*$Thours;
  					}
 
-       //array_push($empty_array, $Tarray);
-if (count($ag)>1) {
+ 				}//while-end
+
+
   # code...
-
-
- 				}
-
-
+if (mysqli_num_rows($agentResult)> 0) {
 
  				$Tarray =array(
  					'ticketing' => $Twork,
@@ -199,12 +202,12 @@ if (count($ag)>1) {
 
  					);
  				return $Tarray;
-          # code...
-}
- 			?>
- 				 
+        # code...
+
+ 		
+ 				  } 
  				  
- 		<?php	} ?>
+ 			} ?>
  		</table>
  	</div>
 
