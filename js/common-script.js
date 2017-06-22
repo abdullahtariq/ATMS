@@ -249,7 +249,9 @@ function genPDF() {
                 });
               }
 
-
+ /*=================================
+ Multiuser Reports
+==================================*/
 function veiwreport(){
   var check= $('.mybox');
      var id_string;
