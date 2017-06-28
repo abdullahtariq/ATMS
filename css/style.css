@@ -283,3 +283,7 @@ span.lft-type {
     float: right;
     padding-top: 17px;
 }
+.tbl-header th{
+    border-right: 1px solid #8ea9db;
+    text-align: center;
+}
