@@ -4,12 +4,18 @@
  <link rel="stylesheet" type="text/css" href="../../css/datepicker.css">
  <!-- Custom CSS -->
  <link rel="stylesheet" type="text/css" href="../../css/style.css">
-<script src="../js/script.js"></script>
-
-
+<script src="../../js/script.js"></script>
+ <script  src="../../js/html2canvas.js"></script>
+ <script  src="../../js/jspdf.min.js"></script>
+<script  src="../../js/common-script.js"></script>
+<script src="../../js/jquery-1.8.2.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script src="../../js/validator.js"></script>
  <?php
 
-
+include '../footer.php';
  include '../methods/cmethods.php';
  $id=$_GET['id'];
  $currentUserIds = explode(",", $id);
@@ -46,30 +52,31 @@
  				</tr>
  			</thead>
 
- 			<tr class="text-center">
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td class="bg-grey"></td>
- 				<td><b>W</b></td>
- 				<td><b>T</b></td>
- 				<td><b>M</b></td>
- 				<td><b>L</b></td>
- 				<td><b>O</b></td>
- 				<td><b>TH</b></td>
- 				<td><b>W</b></td>
- 				<td><b>T</b></td>
- 				<td><b>M</b></td>
- 				<td><b>L</b></td>
- 				<td><b>O</b></td>
- 				<td><b>TC</b></td>
+ 			<tr class="tbl-header">
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th class="bg-grey"></th>
+ 				<th>W</th>
+ 				<th>T</th>
+ 				<th>M</th>
+ 				<th>L</th>
+ 				<th>O</th>
+ 				<th>TH</th>
+ 				<th>W</th>
+ 				<th>T</th>
+ 				<th>M</th>
+ 				<th>L</th>
+ 				<th>O</th>
+ 				<th>TC</th>
  			</tr>
+
 
 <?php
 
@@ -319,5 +326,5 @@ if (mysqli_num_rows($agentResult)> 0) {
  			} ?>
  		</table>
  	</div>
-
+</div>
  </div>
