@@ -49,13 +49,14 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
    				$ftnresult=select('users',"","");
 
    				while ($userResult=mysqli_fetch_assoc($ftnresult)) {
-
+  
    					if ($userResult['deactivate']=='on') {?>
 
    					<tbody>
    						<div>
+
                      <?php
-                      if ($userResult['inforole']=="AG") {?>
+                      if ($userResult['inforole']=="AG" || $userResult['direct']=="Direct") {?>
                             
                             <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
                              <td class="text-center"><input class="mybox" type="checkbox" id="check-box"   name="check-box" disabled="disabled"></td>
@@ -63,10 +64,10 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
                     <?php  }else{?>
 
                             <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="editRow(event)">
-                            <td></td>
+                            <td> </td>
                   <?php  } ?>
    								<!-- <td ><?php echo $userResult['identity_no']; ?></td> -->
-                           <td class="capitalize"><?php echo $userResult['lastname'] ?></td>
+                           <td class="capitalize"><?php echo $userResult['direct']; ?><?php echo $userResult['lastname'] ?></td>
    								<td class="capitalize"><?php echo $userResult['firstname'] ?></td>
    								<td><?php echo $userResult['mobile']; ?></td>
    								<td><?php echo $continents[$userResult['continents']]; ?></td>
@@ -82,7 +83,7 @@ $roleINFO= array("CH"=>"Chief","HM"=>"Hub Manager","AG"=>"Agent","HS"=>"Hub Supe
 
    					<tbody>
                   <?php
-                      if ($userResult['inforole']=="AG") {?>
+                      if ($userResult['inforole']=="AG" || $userResult['direct']=="Direct") {?>
                             
                             <tr class="showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
                             <td class="text-center"><input  type="checkbox" class="mybox" id="check-box"  name="check-box"></td>

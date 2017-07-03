@@ -1,16 +1,17 @@
- <link rel="stylesheet" href="../../css/bootstrap.min-3.css" />
- <link href="../fonts/font-awesome.min.css" rel="stylesheet"/>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css"/>
- <link rel="stylesheet" type="text/css" href="../../css/datepicker.css">
- <!-- Custom CSS -->
- <link rel="stylesheet" type="text/css" href="../../css/style.css">
-<script src="../../js/script.js"></script>
- <script  src="../../js/html2canvas.js"></script>
- <script  src="../../js/jspdf.min.js"></script>
-<script  src="../../js/common-script.js"></script>
-<script src="../../js/jquery-1.8.2.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/bootstrap-datepicker.js"></script>
+     <link rel="stylesheet" href="../../css/bootstrap.min-3.css" />
+     <link href="../fonts/font-awesome.min.css" rel="stylesheet"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css"/>
+     <link rel="stylesheet" type="text/css" href="../../css/datepicker.css">
+     <!-- Custom CSS -->
+     <link rel="stylesheet" type="text/css" href="../../css/style.css">
+     <script src="../../js/jquery-1.8.2.min.js"></script>
+     <script src="../js/script.js"></script>
+     <script  src="../../js/html2canvas.js"></script>
+     <script  src="../../js/jspdf.min.js"></script>
+     <script  src="../../js/common-script.js"></script>
+    
+     <script src="../../js/bootstrap.min.js"></script>
+     <script src="../../js/bootstrap-datepicker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
     <script src="../../js/validator.js"></script>
  <?php
@@ -30,8 +31,61 @@ include '../footer.php';
    }
  }
    // print_r($empty_array);?>
+<div class="container">    
+<div class="row">
+  <div class="col-md-3 col-sm-12" > 
+                    
+              
+              <select onchange="hubfil(event)" id="hubs" class="selectpicker drp" name="continents" >
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="America" >America</option>
+                <option value="Africa">Africa</option>
+                <option value="HQ">HQ</option>
+              </select>
+            </div>
 
- <div class="">
+
+ <div class="down_pdf">
+  <button type="button" class="btn btn-primary" onclick="genPDF()">Download</button>
+</div>
+</div>
+<!-- Start Search Date      -->
+
+    <div class="row ">
+      <div class="col-sm-2"></div>
+      <form  role="form" action="#" method="POST" enctype="multipart/form-data">
+       <div class="col-md-4 col-sm-12">
+        <div class="form-group">
+         <label>START DATE</label>
+         <div class='input-group input-append date' id="dp4" data-date-format="dd-mm-yyyy">
+          <span class="input-group-addon add-on">
+           <span class="glyphicon glyphicon-calendar"></span>
+         </span>
+         <input readonly="readonly" data-format="hh:mm:ss" type='text' class="form-control span2" id="strt-dt" name="strt-dt"/>
+       </div>
+     </div>
+   </div>
+   <div class="col-md-4 col-sm-12">
+     <div class="form-group">
+      <label>END DATE</label>
+      <div class='input-group input-append date' id="dp5" data-date-format="dd-mm-yyyy">
+        <span class="input-group-addon add-on">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+        <input required readonly="readonly" data-format="hh:mm:ss" type='text' class="form-control span2" name="end-dt" id="end-dt" />
+      </div> 
+    </div>
+  </div>
+  <div class="search">
+   <input type="submit" class="btn btn-primary" value="Search" name="Search"></div>
+ </form>
+</div>
+<!-- End Search Date      -->
+</div>
+
+
+ <div id="page">
 
  	<div class="table-responsive tale-strip-color" id="tabular">
  		<table class="table-striped table table-wrap"   >
