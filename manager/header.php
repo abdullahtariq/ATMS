@@ -61,6 +61,10 @@ session_start();
 
 
                     <li><a href="index.php?act=hmu" class="scroll-link headerLogo">Manage Users</a></li>
+                    <?php if ($_SESSION['direct']=='Direct') {?>
+                      
+                      <li><a href="../agents/index.php?id=<?php echo $_SESSION['user_id']; ?>&hm=1" class="scroll-link headerLogo">Hours</a></li>
+                  <?php  }?>
                 </ul>
                 <ul class="nav navbar-nav right-nav" id="mainav">
 

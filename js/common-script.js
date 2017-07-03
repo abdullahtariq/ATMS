@@ -140,8 +140,8 @@ function myFunction(event) {
  // console.log(event.which);
  var input=document.getElementById("mysearch");
 
- var filter=input.value.toLowerCase();
-     // console.log(filter);
+ var filter=input.value;
+     console.log(filter);
     var table=document.getElementById("tblrecord");
     // console.log(table);
     var tr=table.getElementsByTagName("tr");
@@ -280,6 +280,37 @@ function veiwreport(){
      window.location = "users/multiuser.php?id="+updated_ids;
 }
 
+
+ /*=================================
+ Multiuser Reports
+==================================*/
+
+
+
+function hubfil(events) {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("hubs");
+  filter = input.value.toLowerCase();
+  table = document.getElementById("tabular");
+  tr = table.getElementsByTagName("tr");
+   console.log(tr)
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[3];
+     console.log(td);
+    if (td) {
+      if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+
+
 /*=================================
  Plugin Intializers
 ==================================*/
@@ -318,6 +349,11 @@ e.stopPropagation();
   if (Role) {
     Role = Role.getAttribute('data-value')
     $('#urole').selectpicker('val',Role);
+  }
+  var direct=document.getElementById('dir');
+  if (direct) {
+    direct=direct.getAttribute('data-value');
+    $('#dir').selectpicker('val',direct);
   }
   // /* time to edit*/
   var financial=document.getElementById('findata');

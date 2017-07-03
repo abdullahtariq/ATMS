@@ -26,6 +26,7 @@ if (mysqli_num_rows( $result)==1) {
    $_SESSION['user_id']=$crntresult['user_id'];
    $_SESSION['continents']=$crntresult['continents'];
    $_SESSION['peryear']=$crntresult['peryear'];
+   $_SESSION['direct']=$crntresult['direct'];
 
 
 

@@ -61,6 +61,12 @@ session_start();
 
 
                     <li><a href="index.php?act=hubsu" class="scroll-link headerLogo">Manage Users</a></li>
+                
+
+                <?php if ($_SESSION['direct']=='Direct') {?>
+                      
+                      <li><a href="../agents/index.php?id=<?php echo $_SESSION['user_id']; ?>&hs=2" class="scroll-link headerLogo">Hours</a></li>
+                  <?php  }?>
                 </ul>
                 <ul class="nav navbar-nav right-nav" id="mainav">
 

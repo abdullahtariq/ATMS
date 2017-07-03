@@ -107,9 +107,9 @@ $ftnresult=mysqli_fetch_assoc($result);
 						<label>Role Information</label>
 						<div class="form-group">
 							<select id="urole" class="selectpicker" name="inforole" data-value="<?php echo  $ftnresult['inforole']; ?>">
-								
-								<option value="AG">Agent</option>
 								<option value="HS">Hub Supervisor</option>
+								<option value="AG">Agent</option>
+								<option value="HM">Hub Manager</option>
 								
 							</select>
 						</div>
@@ -121,6 +121,17 @@ $ftnresult=mysqli_fetch_assoc($result);
 							<label>Mobile Number</label>
 							<input type="text" class="form-control"  name="mobile"  id="Mnumber" value="<?php echo  $ftnresult['mobile']; ?>" >
 							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+					<?php  echo $ftnresult['direct']; ?>
+					<div class="col-md-6 col col-sm-12">
+						<label>Reference</label>
+						<div class="form-group">
+							<select id="dir" class="selectpicker" name="direct" data-value="<?php echo  $ftnresult['direct']; ?>">
+								<option value="-1">Select</option>
+								<option value="Direct">Direct</option>
+								<option value="Indirect">Indirect</option>
+							</select>
 						</div>
 					</div>
 				</div>	
