@@ -114,6 +114,16 @@
                 <div class="help-block with-errors"></div>
               </div>
             </div>
+             <div class="col-md-6 col col-sm-12">
+              <label>Reference</label>
+              <div class="form-group">
+                <select id="dir" class="selectpicker" name="direct">
+                  <option value="-1">Select</option>
+                  <option value="Direct">Direct</option>
+                  <option value="Indirect">Indirect</option>
+                </select>
+              </div>
+            </div>
           </div>
         </div> 
         <br><br><br><br>   

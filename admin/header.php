@@ -2,6 +2,7 @@
 
 include '../common-sql.php';
 session_start();
+// echo $_SESSION['direct'];
 ?>
 <!doctype html>
 
@@ -62,6 +63,7 @@ session_start();
 
 
                     <li><a href="index.php?act=mgu" class="scroll-link headerLogo">Manage Users</a></li>
+                    
 
                 </ul>
                 <ul class="nav navbar-nav right-nav" id="mainav">

@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 ?>
 <!doctype html>
 
@@ -58,8 +59,17 @@ session_start();
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id="mainNav">
-                    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+                <?php if (isset($_GET['hm']) && $_GET['hm']=='1') {?>
+                  
+                    <li class="active"><a href="../manager/index.php?act=hmu" class="scroll-link">Home</a></li>
+                <?php }elseif (isset($_GET['hs']) && $_GET['hs']=='2') {?>
+                
+                  <li class="active"><a href="../supervisor/index.php?act=hubsu" class="scroll-link">Home</a></li>
 
+               <?php }
+                else {  ?>
+                    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+                   <?php } ?>
                     <li><a href="#" class="scroll-link"> Download my Report</a></li>
                 </ul>
                  <ul class="nav navbar-nav right-nav" id="mainav">

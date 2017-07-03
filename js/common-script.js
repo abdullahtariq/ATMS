@@ -350,6 +350,11 @@ e.stopPropagation();
     Role = Role.getAttribute('data-value')
     $('#urole').selectpicker('val',Role);
   }
+  var direct=document.getElementById('dir');
+  if (direct) {
+    direct=direct.getAttribute('data-value');
+    $('#dir').selectpicker('val',direct);
+  }
   // /* time to edit*/
   var financial=document.getElementById('findata');
   if (financial) {

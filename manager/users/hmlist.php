@@ -55,7 +55,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
     					<tbody>
     						<div>
                             <?php
-                      if ($userResult['inforole']=="AG") {?>
+                      if ($userResult['inforole']=="AG" || $userResult['direct']=="Direct") {?>
                             
                             <tr class="danger showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
 
@@ -81,7 +81,7 @@ $fundsource=array("RB-10"=>"RB (10 UNA)","2QS"=>"2QSA (Support Account)","10-RC"
 
     					<tbody>
     						<?php
-                      if ($userResult['inforole']=="AG") {?>
+                      if ($userResult['inforole']=="AG" || $userResult['direct']=="Direct") {?>
                             
                             <tr class="showCursor" id="row-<?php echo $userResult['user_id'] ; ?>" onclick="showRow(event)">
 
