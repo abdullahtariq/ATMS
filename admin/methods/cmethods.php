@@ -22,6 +22,7 @@ function sendPasswordInEmail($arrayObj){
 
   $to = $arrayObj['email']; // note the comma
 
+
 // Subject
   $subject = 'Congratulation! Your UN-Employee Registertion is done successfully.';
 
