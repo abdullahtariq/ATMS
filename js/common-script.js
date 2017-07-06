@@ -306,9 +306,94 @@ function hubfil(events) {
     }       
   }
 }
+/*=================================
+Forget Password
+==================================*/
+function forget() {
+   
+ var x =document.getElementById('forget');
+      // x.style.display="block";
+    var y=document.getElementById('login');
+ 
+
+     if (x.style.display === 'none') {
+        x.style.display = 'block';
+        y.style.display='none';
+        
+        document.getElementById('btn-show').style.display='block';
+    } else {
+        x.style.display = 'none';
+        y.style.display='block';
+        
+        document.getElementById('btn-show').style.display='none';
+    }
+}
 
 
 
+function sendForgetPwd() {
+ var emailValue=document.getElementById('showEmail').value;
+  // alert(emailValue);
+   $.ajax({
+                             type:"POST",
+                             url:"../ATMS/admin/methods/forgetPassword.php",
+                             data:'email='+emailValue,
+                             success:function(data) {
+
+                              $("#msg").html(data);
+                              
+                              // console.log(Object.values(obj[1]));
+
+                              if (JSON.parse(data).status=='true') {
+                                   
+                                   alert('New password has been sent to your registered email' );
+                              }else{
+                                alert('The email address was not found in the database');
+                              }
+
+
+                            }
+                          })
+  
+}
+ /*============= End ===========*/
+
+ /*=============================
+ Update Password
+==================================*/
+  function updatepwd() {
+    var upbtn=document.getElementById('upbtn');
+                              
+    var psd=document.getElementById('old-psd').value;
+    // console.log(psd);
+     var con_psd=document.getElementById('new-psd').value;
+    // console.log(con_psd);
+  if (psd==con_psd && !$('#upbtn').hasClass("disabled")) {
+    upbtn.classList.add("disabled");
+      $.ajax({
+                             type:"POST",
+                             url:"../admin/methods/updatepassword.php",
+                             data:'password='+psd,
+                             success:function(data) {
+                                 console.log(data); 
+                              $("#msg").html(data);
+                              
+                              if (JSON.parse(data).status=='true') {
+                                $('#old-psd,#new-psd').val('');
+                                $('#upbtn').removeClass('disabled');
+                                $('#exampleModal').modal('hide');
+                               $('.header').after('<div class="container"><div id="myalert"  class="alert alert-success" role="alert" collapse><a href="#" class="close" data-dismiss="alert">&times;</a><strong> Password Updated Sucessfully!</strong></div></div>')
+
+                              }
+
+                            }
+                          })
+      }else{
+        alert('Please Enter Same Password');
+        $('#old-psd,#new-psd').val('');
+      }
+
+  }
 
 
 /*=================================
@@ -330,8 +415,9 @@ e.stopPropagation();
 
 });
 
-
-
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
 
 	$('.selectpicker').selectpicker({
 		  size: 5,
