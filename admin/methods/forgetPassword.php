@@ -29,7 +29,7 @@ echo json_encode($response);
 //echo "{status:true,message:'New password has been sent to your registered email (i.e) ".$email."'}";
 
 $emailArray=array('email'=>$email,'password'=>$password);
-// sendPasswordInEmail($emailArray);
+ sendPasswordInEmail($emailArray);
 
 }else{
 $response = array('status'=>'false','message'=>'The email address was not found in the database');
